@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | SonicForge Studio</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Poppins:wght@300;400;600;700&family=Outfit:wght@700&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body data-theme="dark">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top scrolled">
+        <div class="container container-custom">
+            <a class="navbar-brand brand-identity" href="index.html">
+                <img src="assets/images/logo.png" alt="SonicForge Logo" class="brand-logo-img">
+                <span class="brand-text">SonicForge</span>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar">
+                <i class="bi bi-list"></i>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                style="background: var(--bg-card); color: var(--text-main);">
+                <div class="offcanvas-header border-bottom border-light border-opacity-10">
+                    <h5 class="offcanvas-title cinematic-font">Menu</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="home-2.html">Home 2</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="services.html">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+                        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    </ul>
+                    <div class="d-flex align-items-center gap-2">
+                        <div id="theme-toggle" class="theme-toggle me-2">
+                            <i class="bi bi-sun-fill"></i>
+                        </div>
+                        <a href="login.html" class="btn btn-premium-sm btn-outline-studio">Login</a>
+                        <a href="register.html" class="btn btn-premium-sm btn-primary-studio">Sign Up</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- SECTION 1 – Recording Sessions -->
+    <section class="section-padding recording-sessions">
+        <canvas class="music-canvas"></canvas>
+        <div class="container container-custom">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-7 reveal-up">
+                    <div class="parallax-img-wrap">
+                        <img src="https://4kwallpapers.com/images/wallpapers/pooja-hegde-red-3840x2160-9207.jpg"
+                            alt="Recording Studio" class="parallax-target">
+                    </div>
+                </div>
+                <div class="col-lg-5 reveal-up" style="transition-delay: 0.2s;">
+                    <span class="text-primary text-uppercase fw-bold ls-2 mb-3 d-block">01. Tracking</span>
+                    <h2 class="section-title text-start mb-4">Pristine <span class="text-gradient">Recording</span>
+                        Sessions</h2>
+                    <p class="text-white-50 fs-5 mb-5">
+                        Capture your sound with unmatched clarity. Our acoustically perfect rooms and legendary
+                        microphone collection ensure every note is preserved in its purest form.
+                    </p>
+                    <div class="row g-4">
+                        <div class="col-6">
+                            <h5 class="text-white mb-2">Vintage Chain</h5>
+                            <p class="small text-white-50">Neve, SSL, and Telefunken outboard gear.</p>
+                        </div>
+                        <div class="col-6">
+                            <h5 class="text-white mb-2">Live Room</h5>
+                            <p class="small text-white-50">Variable acoustics for any genre or vibe.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2 – Mixing & Mastering -->
+    <section class="section-padding mixing-mastering">
+        <canvas class="music-canvas"></canvas>
+        <div class="waveform-bg"></div>
+        <div class="container container-custom text-center position-relative z-3">
+            <div class="reveal-up">
+                <span class="text-primary text-uppercase fw-bold ls-2 mb-3 d-block">02. Post-Production</span>
+                <h2 class="section-title mb-5">Mixing & <span class="text-gradient">Mastering</span></h2>
+                <div class="mb-5 glow-pulse">
+                    <img src="https://t3.ftcdn.net/jpg/04/31/21/20/360_F_431212015_tIZUXv099VuHyNa3i2phiMFyVSsGPc78.jpg"
+                        alt="Mixing Console" class="img-fluid rounded-circle border border-primary border-opacity-20"
+                        style="max-width: 400px; height: 400px; object-fit: cover;">
+                </div>
+                <p class="text-white-50 mx-auto" style="max-width: 700px;">
+                    Translating frequency into feeling. Our hybrid analog-digital workflow provides the warmth of tape
+                    with the surgical precision of modern mastering.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3 – Music Production -->
+    <section class="section-padding production-section">
+        <canvas class="music-canvas"></canvas>
+        <div class="container container-custom">
+            <div class="row mb-5 text-center reveal-up">
+                <div class="col-lg-8 mx-auto">
+                    <span class="text-primary text-uppercase fw-bold ls-2 mb-3 d-block">03. Synthesis</span>
+                    <h2 class="section-title">Music <span class="text-gradient">Production</span></h2>
+                    <p class="text-white-50">From the first spark of an idea to a chart-ready masterpiece.</p>
+                </div>
+            </div>
+
+            <div class="production-scroll reveal-up">
+                <!-- Card 1 -->
+                <div class="production-card">
+                    <div class="mb-4 text-primary fs-1">
+                        <i class="bi bi-music-note-list"></i>
+                    </div>
+                    <h4 class="text-white mb-3">Composition</h4>
+                    <p class="text-white-50 mb-0">Collaborative songwriting and arrangement to bring your melodies to
+                        life.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="production-card">
+                    <div class="mb-4 text-primary fs-1">
+                        <i class="bi bi-cpu"></i>
+                    </div>
+                    <h4 class="text-white mb-3">Sound Design</h4>
+                    <p class="text-white-50 mb-0">Exclusive patch creation and sonic textures for a unique auditory
+                        identity.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="production-card">
+                    <div class="mb-4 text-primary fs-1">
+                        <i class="bi bi-people"></i>
+                    </div>
+                    <h4 class="text-white mb-3">Artist Coaching</h4>
+                    <p class="text-white-50 mb-0">Vocal direction and performance coaching to capture the perfect take.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4 – Studio Experience -->
+    <section class="experience-immersive">
+        <canvas class="music-canvas"></canvas>
+        <div class="spotlight-beam"></div>
+        <div class="smoke-overlay"></div>
+        <img src="assets/img/service-experience.png" class="immersive-bg-zoom" alt="Studio Lounge"
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.3;">
+
+        <div class="container container-custom position-relative z-3">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8 reveal-up">
+                    <h2 class="display-3 text-white mb-4 cinematic-font">The Ultimate <br><span
+                            class="text-gradient">Sonic Experience</span></h2>
+                    <p class="text-white-50 fs-5 mb-5">
+                        More than a studio. A sanctuary for creativity, engineered for the world's most demanding
+                        artists.
+                    </p>
+                    <a href="contact.html" class="btn btn-premium btn-primary-studio px-5 py-3">Reserve Your Session</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="section-padding border-top border-light border-opacity-10 py-5">
+        <div class="container">
+            <div class="row g-4 text-center text-lg-start">
+                <div class="col-lg-4">
+                    <a href="index.html" class="footer-brand brand-identity mb-4">
+                        <img src="assets/images/logo.png" alt="SonicForge Logo" class="brand-logo-img">
+                        <span class="brand-text">SonicForge</span>
+                    </a>
+                    <p class="text-muted pe-lg-5">A premium music recording, mixing, and mastering studio dedicated to
+                        artist sonic excellence since 2012.</p>
+                    <div class="d-flex justify-content-center justify-content-lg-start gap-3 mt-4">
+                        <a href="#" class="btn btn-outline-studio btn-premium-sm rounded-circle p-2"><i
+                                class="bi bi-instagram"></i></a>
+                        <a href="#" class="btn btn-outline-studio btn-premium-sm rounded-circle p-2"><i
+                                class="bi bi-facebook"></i></a>
+                        <a href="#" class="btn btn-outline-studio btn-premium-sm rounded-circle p-2"><i
+                                class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 offset-lg-1">
+                    <h6 class="text-white text-uppercase mb-4 fw-bold">Quick Links</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="about.html"
+                                class="text-muted text-decoration-none hover:text-primary transition-all">About
+                                Studio</a></li>
+                        <li class="mb-2"><a href="services.html"
+                                class="text-muted text-decoration-none hover:text-primary transition-all">Our
+                                Services</a></li>
+                        <li class="mb-2"><a href="pricing.html"
+                                class="text-muted text-decoration-none hover:text-primary transition-all">Pricing
+                                Plans</a></li>
+                        <li><a href="contact.html"
+                                class="text-muted text-decoration-none hover:text-primary transition-all">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-2">
+                    <h6 class="text-white text-uppercase mb-4 fw-bold">Support</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="dashboard.html"
+                                class="text-muted text-decoration-none hover:text-primary transition-all">Artist
+                                Dashboard</a></li>
+                        <li class="mb-2"><a href="blog.html"
+                                class="text-muted text-decoration-none hover:text-primary transition-all">Studio
+                                Blog</a></li>
+                        <li class="mb-2"><a href="contact.html"
+                                class="text-muted text-decoration-none hover:text-primary transition-all">Book
+                                Online</a></li>
+                        <li><a href="#"
+                                class="text-muted text-decoration-none hover:text-primary transition-all">Support
+                                Center</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h6 class="text-white text-uppercase mb-4 fw-bold">Contact Info</h6>
+                    <ul class="list-unstyled text-muted">
+                        <li class="mb-3 d-flex align-items-center justify-content-center justify-content-lg-start"><i
+                                class="bi bi-geo-alt me-3 text-primary"></i> 123 Studio Drive, Nashville, TN</li>
+                        <li class="mb-3 d-flex align-items-center justify-content-center justify-content-lg-start"><i
+                                class="bi bi-telephone me-3 text-primary"></i> +1 (555) 123-4567</li>
+                        <li class="d-flex align-items-center justify-content-center justify-content-lg-start"><i
+                                class="bi bi-envelope me-3 text-primary"></i> echoes@sonicforge.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row mt-5 pt-4 border-top border-light border-opacity-10">
+                <div class="col-12 text-center text-muted small">
+                    <p class="mb-0">&copy; 2026 SonicForge Studio. Engineered for excellence.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Parallax Script for Section 1
+        window.addEventListener('scroll', () => {
+            const target = document.querySelector('.parallax-target');
+            if (target) {
+                const scrolled = window.window.scrollY;
+                const offset = target.parentElement.offsetTop;
+                if (scrolled > offset - window.innerHeight) {
+                    const yPos = (scrolled - offset) * 0.15;
+                    target.style.transform = `translateY(${yPos}px)`;
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

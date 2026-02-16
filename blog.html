@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artists & Stories - SonicForge Studio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Google Fonts: Playfair Display & Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body data-theme="dark">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top scrolled">
+        <div class="container container-custom">
+            <a class="navbar-brand brand-identity" href="index.html">
+                <img src="assets/images/logo.png" alt="SonicForge Logo" class="brand-logo-img">
+                <span class="brand-text">SonicForge</span>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar">
+                <i class="bi bi-list"></i>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                style="background: var(--bg-card); color: var(--text-main);">
+                <div class="offcanvas-header border-bottom border-light border-opacity-10">
+                    <h5 class="offcanvas-title cinematic-font">Menu</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="home-2.html">Home 2</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="blog.html">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    </ul>
+
+                    <div class="d-flex align-items-center gap-2">
+                        <div id="theme-toggle" class="theme-toggle me-2">
+                            <i class="bi bi-moon-fill"></i>
+                        </div>
+                        <a href="login.html" class="btn btn-premium-sm btn-outline-studio">Login</a>
+                        <a href="register.html" class="btn btn-premium-sm btn-primary-studio">Sign Up</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- PREMIUM ASYMMETRIC BLOG HERO -->
+    <section class="hero-blog">
+        <div class="blog-bg-label">Journal</div>
+        <canvas id="music-canvas"></canvas>
+
+        <div class="container container-custom hero-blog-content-wrap">
+            <div class="blog-editorial-grid">
+                <!-- Text Content Side -->
+                <div class="blog-text-side reveal-up">
+                    <div class="blog-status-tag">Editorial Feed 2026</div>
+                    <h1 class="hero-title-music">Defining The <br><span class="text-gradient">Modern Hustle</span></h1>
+                    <p class="hero-subtitle-music mb-5">
+                        A unique perspective on studio life, artistic growth, and the engineering secrets of the
+                        industry's heaviest hitters.
+                    </p>
+                    <div class="hero-cta d-flex gap-3">
+                        <a href="#feed" class="btn btn-premium btn-accent-studio">View Articles</a>
+                        <a href="about.html" class="btn btn-premium btn-outline-studio">Our Vision</a>
+                    </div>
+                </div>
+
+                <!-- Floating Photographic Side -->
+                <div class="blog-image-side reveal-up" style="transition-delay: 0.2s;">
+                    <div class="blog-frame-accent"></div>
+                    <div class="blog-image-frame">
+                        <img src="assets/img/blog-hero.png" alt="Legendary Artist Portrait" class="hero-blog-bg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 1 – Featured Story Spotlight -->
+    <section class="section-padding blog-featured-spotlight">
+        <canvas class="music-canvas"></canvas>
+        <div class="spotlight-sweep"></div>
+        <div class="container container-custom">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6 reveal-up">
+                    <div class="featured-img-wrap">
+                        <img src="assets/img/blog-featured.png" alt="Featured Story" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-6 reveal-up" style="transition-delay: 0.2s;">
+                    <span class="text-primary text-uppercase fw-bold ls-2 mb-3 d-block">Masterclass Series</span>
+                    <h2 class="section-title text-start mb-4">Capturing The <br><span class="text-gradient">Legendary
+                            Neve Sound</span></h2>
+                    <p class="text-white-50 fs-5 mb-5">
+                        An deep dive into the engineering secrets behind the world's most sought-after console. Learn
+                        why the 80-series remains the backbone of legendary recordings.
+                    </p>
+                    <a href="blog-details.html" class="btn btn-premium btn-accent-studio">Read Full Feature</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2 – Latest Studio Insights -->
+    <section id="feed" class="section-padding editorial-grid-section">
+        <canvas class="music-canvas"></canvas>
+        <div class="container container-custom">
+            <div class="row mb-5 text-center reveal-up">
+                <div class="col-lg-8 mx-auto">
+                    <span class="text-primary text-uppercase fw-bold ls-2 mb-3 d-block">Editorial Feed</span>
+                    <h2 class="section-title">Latest Studio <span class="text-gradient">Insights</span></h2>
+                    <p class="text-white-50">Expert perspectives on the craft of modern music creation.</p>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <!-- Post 1 -->
+                <div class="col-lg-4 col-md-6 reveal-up">
+                    <div class="blog-card-3d">
+                        <div class="blog-card-img">
+                            <img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&q=80&w=800"
+                                alt="Analog Tape">
+                        </div>
+                        <div class="p-4">
+                            <span class="text-primary small fw-bold text-uppercase">Technical</span>
+                            <h4 class="mt-2 text-white">The Emotion of Analog Tape</h4>
+                            <p class="text-white-50 mb-4">Why saturation is more than just a distortion—it's a feeling.
+                            </p>
+                            <a href="blog-details.html" class="text-primary fw-bold text-decoration-none small">Explore
+                                Article →</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Post 2 -->
+                <div class="col-lg-4 col-md-6 reveal-up" style="transition-delay: 0.1s;">
+                    <div class="blog-card-3d">
+                        <div class="blog-card-img">
+                            <img src="https://images.unsplash.com/photo-1514525253361-bee8718a300c?auto=format&fit=crop&q=80&w=800"
+                                alt="Studio Gear">
+                        </div>
+                        <div class="p-4">
+                            <span class="text-primary small fw-bold text-uppercase">Production</span>
+                            <h4 class="mt-2 text-white">Mixing Modern Vocals</h4>
+                            <p class="text-white-50 mb-4">Secrets to achieving chart-topping clarity and presence.</p>
+                            <a href="blog-details.html" class="text-primary fw-bold text-decoration-none small">Explore
+                                Article →</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Post 3 -->
+                <div class="col-lg-4 col-md-6 reveal-up" style="transition-delay: 0.2s;">
+                    <div class="blog-card-3d">
+                        <div class="blog-card-img">
+                            <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&q=80&w=800"
+                                alt="Acoustics">
+                        </div>
+                        <div class="p-4">
+                            <span class="text-primary small fw-bold text-uppercase">Acoustics</span>
+                            <h4 class="mt-2 text-white">Designing The Perfect Room</h4>
+                            <p class="text-white-50 mb-4">How we treated our Live Room A for variable sonic response.
+                            </p>
+                            <a href="blog-details.html" class="text-primary fw-bold text-decoration-none small">Explore
+                                Article →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3 – Artist Stories Carousel -->
+    <section class="section-padding artist-carousel-section">
+        <canvas class="music-canvas"></canvas>
+        <div class="container container-custom">
+            <div class="row mb-5 text-center reveal-up">
+                <div class="col-lg-8 mx-auto">
+                    <span class="text-primary text-uppercase fw-bold ls-2 mb-3 d-block">Artist Spotlight</span>
+                    <h2 class="section-title">Lives In <span class="text-gradient">The Forge</span></h2>
+                    <p class="text-white-50">Real stories from the room where it happens.</p>
+                </div>
+            </div>
+
+            <div class="artist-stories-scroll reveal-up">
+                <div class="artist-story-card">
+                    <img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&q=80&w=800"
+                        alt="Artist Story 1">
+                    <div class="position-absolute bottom-0 start-0 p-4 w-100 bg-gradient-dark">
+                        <h4 class="text-white mb-2">The Night Session</h4>
+                        <p class="text-white-50 small mb-0">How "Neon Dreams" was written and tracked in one 14-hour
+                            session.</p>
+                    </div>
+                </div>
+                <div class="artist-story-card">
+                    <img src="https://images.unsplash.com/photo-1594122230689-45899d9e6f69?auto=format&fit=crop&q=80&w=800"
+                        alt="Artist Story 2">
+                    <div class="position-absolute bottom-0 start-0 p-4 w-100 bg-gradient-dark">
+                        <h4 class="text-white mb-2">Back To Basics</h4>
+                        <p class="text-white-50 small mb-0">Indie-folk minimalist tracking for Sarah Thorne's latest EP.
+                        </p>
+                    </div>
+                </div>
+                <div class="artist-story-card">
+                    <img src="https://images.unsplash.com/photo-1559671902-3bdecacddf7f?auto=format&fit=crop&q=80&w=800"
+                        alt="Artist Story 3">
+                    <div class="position-absolute bottom-0 start-0 p-4 w-100 bg-gradient-dark">
+                        <h4 class="text-white mb-2">The Producers Cut</h4>
+                        <p class="text-white-50 small mb-0">A unique perspective on collaborative creation in a
+                            high-pressure studio environment.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4 – Creative Tips & Tutorials -->
+    <section class="section-padding tips-timeline-section">
+        <canvas class="music-canvas"></canvas>
+        <div class="container container-custom">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6 reveal-up">
+                    <span class="text-primary text-uppercase fw-bold ls-2 mb-3 d-block">Education</span>
+                    <h2 class="section-title text-start mb-5">Creative <br><span class="text-gradient">Tutorials</span>
+                    </h2>
+                    <div class="vertical-timeline-wrap">
+                        <div class="timeline-step mb-5 position-relative">
+                            <div class="timeline-node"></div>
+                            <h4 class="text-white mb-2">Microphone Placement</h4>
+                            <p class="text-white-50 small">Mastering the distance and angle for pristine acoustic
+                                captures.</p>
+                        </div>
+                        <div class="timeline-step mb-5 position-relative">
+                            <div class="timeline-node"></div>
+                            <h4 class="text-white mb-2">Compression Secrets</h4>
+                            <p class="text-white-50 small">Why sometimes "less is more" when dealing with dynamic range.
+                            </p>
+                        </div>
+                        <div class="timeline-step position-relative">
+                            <div class="timeline-node"></div>
+                            <h4 class="text-white mb-2">Frequency Balance</h4>
+                            <p class="text-white-50 small">Ensuring your mix breathes across all digital listening
+                                devices.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 reveal-up" style="transition-delay: 0.2s;">
+                    <div class="studio-card p-5">
+                        <h3 class="mb-4">Weekly Technical Tip</h3>
+                        <p class="text-white-50 mb-5">"The secret to a great mix isn't the plugin, it's the phase
+                            relationship between your microphones on the day of tracking."</p>
+                        <a href="#" class="btn btn-premium btn-outline-studio w-100">Subscribe for More Tips</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5 – Join The SonicForge Community -->
+    <section class="join-community-blog">
+        <canvas class="music-canvas"></canvas>
+        <div class="smoke-overlay"></div>
+        <div class="spotlight-beam"></div>
+        <img src="assets/img/blog-community.png" class="community-bg-img" alt="Community Background">
+
+        <div class="container container-custom text-center position-relative z-3">
+            <div class="reveal-up">
+                <h2 class="display-3 text-white mb-4 cinematic-font">Join The <br><span class="text-gradient">Studio
+                        Collective</span></h2>
+                <p class="text-white-50 fs-5 mb-5 mx-auto" style="max-width: 700px;">
+                    Get exclusive access to session stems, technical workshops, and the secret vault of SonicForge
+                    production notes.
+                </p>
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <div class="d-flex gap-2">
+                            <input type="email"
+                                class="form-control bg-transparent border-light border-opacity-25 text-white py-3 shadow-none"
+                                placeholder="Enter your email...">
+                            <button class="btn btn-premium btn-primary-studio px-5 glow-pulse">Join Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Global Footer -->
+    <footer class="section-padding border-top border-light border-opacity-10 py-5">
+        <div class="container">
+            <div class="row g-4 text-center text-lg-start">
+                <div class="col-lg-4">
+                    <a href="index.html" class="footer-brand brand-identity mb-4">
+                        <img src="assets/images/logo.png" alt="SonicForge Logo" class="brand-logo-img">
+                        <span class="brand-text">SonicForge</span>
+                    </a>
+                    <p class="text-muted pe-lg-5">A premium music recording, mixing, and mastering studio dedicated to
+                        artist sonic excellence since 2012.</p>
+                    <div class="d-flex justify-content-center justify-content-lg-start gap-3 mt-4">
+                        <a href="#" class="btn btn-outline-studio btn-premium-sm rounded-circle p-2"><i
+                                class="bi bi-instagram"></i></a>
+                        <a href="#" class="btn btn-outline-studio btn-premium-sm rounded-circle p-2"><i
+                                class="bi bi-facebook"></i></a>
+                        <a href="#" class="btn btn-outline-studio btn-premium-sm rounded-circle p-2"><i
+                                class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 offset-lg-1">
+                    <h6 class="text-white text-uppercase mb-4 fw-bold">Quick Links</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="about.html"
+                                class="text-muted text-decoration-none hover:text-primary transition-all">About
+                                Studio</a></li>
+                        <li class="mb-2"><a href="services.html"
+                                class="text-muted text-decoration-none hover:text-primary transition-all">Our
+                                Services</a></li>
+                        <li class="mb-2"><a href="pricing.html"
+                                class="text-muted text-decoration-none hover:text-primary transition-all">Pricing
+                                Plans</a></li>
+                        <li><a href="contact.html"
+                                class="text-muted text-decoration-none hover:text-primary transition-all">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-2">
+                    <h6 class="text-white text-uppercase mb-4 fw-bold">Support</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="dashboard.html"
+                                class="text-muted text-decoration-none hover:text-primary transition-all">Artist
+                                Dashboard</a></li>
+                        <li class="mb-2"><a href="blog.html"
+                                class="text-muted text-decoration-none hover:text-primary transition-all">Studio
+                                Blog</a></li>
+                        <li class="mb-2"><a href="contact.html"
+                                class="text-muted text-decoration-none hover:text-primary transition-all">Book
+                                Online</a></li>
+                        <li><a href="#"
+                                class="text-muted text-decoration-none hover:text-primary transition-all">Support
+                                Center</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h6 class="text-white text-uppercase mb-4 fw-bold">Contact Info</h6>
+                    <ul class="list-unstyled text-muted">
+                        <li class="mb-3 d-flex align-items-center justify-content-center justify-content-lg-start"><i
+                                class="bi bi-geo-alt me-3 text-primary"></i> 123 Studio Drive, Nashville, TN</li>
+                        <li class="mb-3 d-flex align-items-center justify-content-center justify-content-lg-start"><i
+                                class="bi bi-telephone me-3 text-primary"></i> +1 (555) 123-4567</li>
+                        <li class="d-flex align-items-center justify-content-center justify-content-lg-start"><i
+                                class="bi bi-envelope me-3 text-primary"></i> echoes@sonicforge.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row mt-5 pt-4 border-top border-light border-opacity-10">
+                <div class="col-12 text-center text-muted small">
+                    <p class="mb-0">&copy; 2026 SonicForge Studio. Engineered for excellence.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

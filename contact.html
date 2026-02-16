@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get In Touch - SonicForge Studio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Google Fonts: Playfair Display & Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Poppins:wght@300;400;600;700&family=Outfit:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body data-theme="dark">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top scrolled">
+        <div class="container container-custom">
+            <a class="navbar-brand brand-identity" href="index.html">
+                <img src="assets/images/logo.png" alt="SonicForge Logo" class="brand-logo-img">
+                <span class="brand-text">SonicForge</span>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar">
+                <i class="bi bi-list"></i>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                style="background: var(--bg-card); color: var(--text-main);">
+                <div class="offcanvas-header border-bottom border-light border-opacity-10">
+                    <h5 class="offcanvas-title cinematic-font">Menu</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="home-2.html">Home 2</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+                        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+                    </ul>
+
+                    <div class="d-flex align-items-center gap-2">
+                        <div id="theme-toggle" class="theme-toggle me-2">
+                            <i class="bi bi-moon-fill"></i>
+                        </div>
+                        <a href="login.html" class="btn btn-premium-sm btn-outline-studio">Login</a>
+                        <a href="register.html" class="btn btn-premium-sm btn-primary-studio">Sign Up</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- CINEMATIC CONTACT HERO -->
+    <section class="hero-contact">
+        <!-- Anti-gravity Particles -->
+        <canvas id="music-canvas"></canvas>
+
+        <div class="contact-card-wrap">
+            <div class="contact-hero-container reveal-up">
+                <div class="row align-items-center g-5">
+                    <!-- Left Side: Form -->
+                    <div class="col-lg-6 contact-left-side">
+                        <h1 class="contact-title-cinematic">Let’s Create <br>Your <span
+                                class="text-gradient">Sound</span></h1>
+                        <p class="contact-subtitle-premium">
+                            From initial tracking to the final master, we turn your musical vision into a sonic reality.
+                        </p>
+
+                        <form class="contact-hero-form">
+                            <div class="form-group">
+                                <label>Full Name</label>
+                                <input type="text" class="form-control shadow-none" placeholder="Enter your name">
+                            </div>
+                            <div class="form-group">
+                                <label>Email Address</label>
+                                <input type="email" class="form-control shadow-none" placeholder="Enter your email">
+                            </div>
+                            <div class="form-group">
+                                <label>Your Message</label>
+                                <textarea class="form-control shadow-none" rows="4"
+                                    placeholder="Tell us about your project..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-contact-glowing">Send Message</button>
+                        </form>
+                    </div>
+
+                    <!-- Right Side: Overlapping Image -->
+                    <div class="col-lg-6 contact-right-side d-none d-lg-flex">
+                        <div class="contact-image-box">
+                            <div class="contact-image-glow"></div>
+                            <img src="assets/img/contact-studio.png" alt="Premium Studio Gear">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 1 – Visit The Studio -->
+    <section class="section-padding visit-studio-section">
+        <canvas class="music-canvas"></canvas>
+        <div class="container container-custom">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-7 reveal-up">
+                    <div class="map-split-wrap">
+                        <img src="assets/img/contact-map.png" alt="Studio Location Map">
+                    </div>
+                </div>
+                <div class="col-lg-5 reveal-up" style="transition-delay: 0.2s;">
+                    <span class="text-primary text-uppercase fw-bold ls-2 mb-3 d-block">Location</span>
+                    <h2 class="section-title text-start mb-5">Visit The <span class="text-gradient">Forge</span>
+                    </h2>
+
+                    <div class="contact-info-block mb-4">
+                        <div class="d-flex align-items-center gap-4">
+                            <div class="contact-icon-glow">
+                                <i class="bi bi-geo-alt-fill"></i>
+                            </div>
+                            <div>
+                                <h5 class="text-white mb-1">Our Address</h5>
+                                <p class="text-white-50 small mb-0">128 Sound Way, Lower Manhattan,<br>New York, NY
+                                    10013</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-block mb-4">
+                        <div class="d-flex align-items-center gap-4">
+                            <div class="contact-icon-glow">
+                                <i class="bi bi-telephone-fill"></i>
+                            </div>
+                            <div>
+                                <h5 class="text-white mb-1">Direct Line</h5>
+                                <p class="text-white-50 small mb-0">+1 (212) Forge-01<br>Mon - Sat: 10am - 10pm</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-block">
+                        <div class="d-flex align-items-center gap-4">
+                            <div class="contact-icon-glow">
+                                <i class="bi bi-envelope-at-fill"></i>
+                            </div>
+                            <div>
+                                <h5 class="text-white mb-1">Email Inquiry</h5>
+                                <p class="text-white-50 small mb-0">sessions@sonicforge.com<br>Response within 24
+                                    hours</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2 – Why Artists Choose SonicForge -->
+    <section class="section-padding why-artists-section">
+        <canvas class="music-canvas"></canvas>
+        <div class="container container-custom">
+            <div class="row mb-5 text-center reveal-up">
+                <div class="col-lg-8 mx-auto">
+                    <span class="text-primary text-uppercase fw-bold ls-2 mb-3 d-block">Superior Standards</span>
+                    <h2 class="section-title">The <span class="text-gradient">Experience</span></h2>
+                    <p class="text-white-50">Why the world's most innovative artists choose our walls.</p>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-4 reveal-up">
+                    <div class="feature-box-glow">
+                        <div class="feature-icon-pulse">
+                            <i class="bi bi-mic-fill"></i>
+                        </div>
+                        <h4 class="text-white mb-3">Master Tracking</h4>
+                        <p class="text-white-50 small">Rare vintage microphone locker and pristine analog signal
+                            paths.</p>
+                        <div class="waveform-line"></div>
+                    </div>
+                </div>
+                <div class="col-lg-4 reveal-up" style="transition-delay: 0.1s;">
+                    <div class="feature-box-glow">
+                        <div class="feature-icon-pulse">
+                            <i class="bi bi-boombox-fill"></i>
+                        </div>
+                        <h4 class="text-white mb-3">Engineered Sound</h4>
+                        <p class="text-white-50 small">Acoustically tuned rooms designed by world-renowned
+                            architects.</p>
+                        <div class="waveform-line"></div>
+                    </div>
+                </div>
+                <div class="col-lg-4 reveal-up" style="transition-delay: 0.2s;">
+                    <div class="feature-box-glow">
+                        <div class="feature-icon-pulse">
+                            <i class="bi bi-stars"></i>
+                        </div>
+                        <h4 class="text-white mb-3">Artist Sanctuary</h4>
+                        <p class="text-white-50 small">A high-vibe creative environment where legend meets
+                            longevity.</p>
+                        <div class="waveform-line"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3 – Book Your Session -->
+    <section class="booking-cta-immersive">
+        <canvas class="music-canvas"></canvas>
+        <div class="smoke-overlay"></div>
+        <div class="spotlight-beam"></div>
+        <img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&q=80&w=1200"
+            class="booking-cta-bg" alt="Studio Horizon">
+
+        <div class="container container-custom text-center position-relative z-3">
+            <div class="reveal-up">
+                <h2 class="display-3 text-white mb-4 cinematic-font">Ready to <span class="text-gradient">Forge Your
+                        Legacy?</span></h2>
+                <p class="text-white-50 fs-5 mb-5 mx-auto" style="max-width: 700px;">
+                    Our master engineers are ready to elevate your project to professional standards.
+                </p>
+                <div class="d-flex gap-4 justify-content-center">
+                    <a href="#hero-contact" class="btn btn-premium btn-primary-studio px-5 py-3 glow-pulse">Book
+                        Your Session</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Global Footer -->
+    <footer class="section-padding border-top border-light border-opacity-10 py-5">
+        <div class="container">
+            <div class="row g-4 text-center text-lg-start">
+                <div class="col-lg-4">
+                    <a href="index.html" class="footer-brand brand-identity mb-4">
+                        <img src="assets/images/logo.png" alt="SonicForge Logo" class="brand-logo-img">
+                        <span class="brand-text">SonicForge</span>
+                    </a>
+                    <p class="text-muted pe-lg-5">A premium music recording, mixing, and mastering studio dedicated to
+                        artist sonic excellence since 2012.</p>
+                    <div class="d-flex justify-content-center justify-content-lg-start gap-3 mt-4">
+                        <a href="#" class="btn btn-outline-studio btn-premium-sm rounded-circle p-2"><i
+                                class="bi bi-instagram"></i></a>
+                        <a href="#" class="btn btn-outline-studio btn-premium-sm rounded-circle p-2"><i
+                                class="bi bi-facebook"></i></a>
+                        <a href="#" class="btn btn-outline-studio btn-premium-sm rounded-circle p-2"><i
+                                class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 offset-lg-1">
+                    <h6 class="text-white text-uppercase mb-4 fw-bold">Quick Links</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="about.html"
+                                class="text-muted text-decoration-none hover:text-primary transition-all">About
+                                Studio</a></li>
+                        <li class="mb-2"><a href="services.html"
+                                class="text-muted text-decoration-none hover:text-primary transition-all">Our
+                                Services</a></li>
+                        <li class="mb-2"><a href="pricing.html"
+                                class="text-muted text-decoration-none hover:text-primary transition-all">Pricing
+                                Plans</a></li>
+                        <li><a href="contact.html"
+                                class="text-muted text-decoration-none hover:text-primary transition-all">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-2">
+                    <h6 class="text-white text-uppercase mb-4 fw-bold">Support</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="dashboard.html"
+                                class="text-muted text-decoration-none hover:text-primary transition-all">Artist
+                                Dashboard</a></li>
+                        <li class="mb-2"><a href="blog.html"
+                                class="text-muted text-decoration-none hover:text-primary transition-all">Studio
+                                Blog</a></li>
+                        <li class="mb-2"><a href="contact.html"
+                                class="text-muted text-decoration-none hover:text-primary transition-all">Book
+                                Online</a></li>
+                        <li><a href="#"
+                                class="text-muted text-decoration-none hover:text-primary transition-all">Support
+                                Center</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h6 class="text-white text-uppercase mb-4 fw-bold">Contact Info</h6>
+                    <ul class="list-unstyled text-muted">
+                        <li class="mb-3 d-flex align-items-center justify-content-center justify-content-lg-start"><i
+                                class="bi bi-geo-alt me-3 text-primary"></i> 123 Studio Drive, Nashville, TN</li>
+                        <li class="mb-3 d-flex align-items-center justify-content-center justify-content-lg-start"><i
+                                class="bi bi-telephone me-3 text-primary"></i> +1 (555) 123-4567</li>
+                        <li class="d-flex align-items-center justify-content-center justify-content-lg-start"><i
+                                class="bi bi-envelope me-3 text-primary"></i> echoes@sonicforge.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row mt-5 pt-4 border-top border-light border-opacity-10">
+                <div class="col-12 text-center text-muted small">
+                    <p class="mb-0">&copy; 2026 SonicForge Studio. Engineered for excellence.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

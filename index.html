@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SonicForge Studio | Where Sound Becomes Legacy</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Google Fonts: Playfair Display & Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Poppins:wght@300;400;600&family=Outfit:wght@700&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body data-theme="dark">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container container-custom">
+            <a class="navbar-brand brand-identity" href="index.html">
+                <img src="assets/images/logo.png" alt="SonicForge Logo" class="brand-logo-img">
+                <span class="brand-text">SonicForge</span>
+            </a>
+
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar">
+                <i class="bi bi-list"></i>
+            </button>
+
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                style="background: var(--bg-card); color: var(--text-main);">
+                <div class="offcanvas-header border-bottom border-light border-opacity-10">
+                    <h5 class="offcanvas-title cinematic-font">Menu</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="home-2.html">Home 2</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+                        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    </ul>
+
+                    <div class="d-flex align-items-center gap-2">
+                        <div id="theme-toggle" class="theme-toggle me-2">
+                            <i class="bi bi-moon-fill"></i>
+                        </div>
+                        <a href="login.html" class="btn btn-premium-sm btn-outline-studio">Login</a>
+                        <a href="register.html" class="btn btn-premium-sm btn-primary-studio">Sign Up</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION (SPLIT CINEMATIC) -->
+    <section class="hero-music">
+        <!-- Background Atmospheric Layers -->
+        <div class="hero-spotlight"></div>
+        <canvas id="music-canvas" class="music-canvas"></canvas>
+
+        <div class="container container-custom min-vh-100 d-flex align-items-center">
+            <div class="row w-100 align-items-center justify-content-between g-5">
+                <!-- Content Column (Left) -->
+                <div class="col-lg-6 hero-left-side">
+                    <div class="hero-content reveal-left pt-lg-5">
+                        <div class="d-flex align-items-center gap-3 mb-4">
+                            <span
+                                class="badge rounded-0 bg-primary bg-opacity-10 text-primary border border-primary border-opacity-20 px-3 py-2 text-uppercase ls-2 fw-bold small">
+                                Global Standard
+                            </span>
+                        </div>
+                        <h1 class="hero-title-music mb-4">
+                            Where Sound <br>Becomes <span class="text-gradient">Legacy</span>
+                        </h1>
+                        <p class="hero-subtitle-music mb-5 fs-5 opacity-75">
+                            Step into a weightless sonic sanctuary. We've engineered an anti-gravity recording
+                            environment where your creative ideas float freely, captured with absolute analog warmth and
+                            cinematic precision.
+                        </p>
+                        <div class="hero-cta d-flex gap-4">
+                            <a href="contact.html" class="btn btn-premium btn-primary-studio">Book a Session</a>
+                            <a href="about.html" class="btn btn-premium btn-outline-studio">Explore Studio</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Artist Column (Right) -->
+                <div class="col-lg-5 hero-right-side position-relative">
+                    <div class="artist-showcase reveal-right" style="transition-delay: 0.3s;">
+                        <div class="spotlight-glow"></div>
+                        <div class="artist-image-container">
+                            <img src="assets/img/hero-artist.png" alt="Music Producer in Studio"
+                                class="img-fluid hero-artist-main">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 1 – DIAGONAL SPLIT -->
+    <section class="split-diagonal min-vh-100 d-flex align-items-center">
+        <div class="gradient-sweep"></div>
+        <canvas class="music-canvas" data-color="255, 215, 0"></canvas> <!-- Golden Particles -->
+        <div class="container container-custom">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-7">
+                    <div class="reveal-up">
+                        <span
+                            class="badge rounded-0 bg-primary bg-opacity-10 text-primary border border-primary border-opacity-20 px-3 py-2 text-uppercase ls-2 fw-bold small mb-4 d-inline-block">The
+                            Vision</span>
+                    </div>
+                    <h2 class="display-4 fw-bold text-white mb-4 cinematic-font reveal-up"
+                        style="transition-delay: 0.1s;">Precision in Every <br><span
+                            class="text-gradient">Frequency</span></h2>
+                    <p class="text-white-50 fs-5 mb-5 reveal-up" style="transition-delay: 0.2s;">At SonicForge, we
+                        believe that recording is a craft where precision meets emotion. Our unique diagonal approach to
+                        acoustics ensures perfect phase coherence for your instruments.</p>
+                    <div class="reveal-up" style="transition-delay: 0.3s;">
+                        <a href="services.html" class="btn btn-premium btn-primary-studio">Our Methodology</a>
+                    </div>
+                </div>
+                <div class="col-lg-5 reveal-up" style="transition-delay: 0.4s;">
+                    <img src="https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&q=80&w=1200"
+                        alt="Studio Gear" class="img-fluid floating-img-drift">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2 – CENTERED WAVEFORM -->
+    <section class="waveform-section min-vh-100 d-flex align-items-center">
+        <canvas class="music-canvas"></canvas>
+        <div class="container container-custom text-center">
+            <div class="reveal-up">
+                <span
+                    class="badge rounded-0 bg-secondary bg-opacity-10 text-secondary border border-secondary border-opacity-20 px-3 py-2 text-uppercase ls-2 fw-bold small mb-4 d-inline-block">Atmosphere</span>
+            </div>
+            <h2 class="section-title glow-breathing reveal-up" style="transition-delay: 0.1s;">Sculpting <span
+                    class="text-gradient">Sonic Space</span></h2>
+            <p class="text-white-50 mx-auto mb-5 reveal-up" style="max-width: 600px; transition-delay: 0.2s;">Every
+                sound has a shape. We help you forge it with absolute spectral honesty using our custom-tuned signal
+                paths.</p>
+
+            <div class="reveal-up" style="transition-delay: 0.3s;">
+                <svg class="waveform-svg" viewBox="0 0 1200 200">
+                    <path class="waveform-path"
+                        d="M0,100 C150,50 300,150 450,100 C600,50 750,150 900,100 C1050,50 1200,100" />
+                    <path class="waveform-path"
+                        d="M0,100 C100,80 200,120 300,100 C400,80 500,120 600,100 C700,80 800,120 900,100 C1000,80 1100,120 1200,100"
+                        style="animation-delay: -1s; opacity: 0.5;" />
+                </svg>
+            </div>
+
+            <div class="mt-5 reveal-up" style="transition-delay: 0.4s;">
+                <button class="btn btn-premium btn-outline-studio px-5">Pulse Response</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3 – THE ARSENAL SHOWCASE (REPLACED LAYOUT) -->
+    <section class="arsenal-showcase-section min-vh-100 d-flex align-items-center">
+        <canvas class="music-canvas" data-color="255, 90, 31"></canvas>
+        <div class="container container-custom py-5">
+            <div class="row mb-5 text-center">
+                <div class="col-lg-8 mx-auto reveal-up">
+                    <span
+                        class="badge rounded-0 bg-primary bg-opacity-10 text-primary border border-primary border-opacity-20 px-3 py-2 text-uppercase ls-2 fw-bold small mb-4 d-inline-block">The
+                        Toolkit</span>
+                    <h2 class="display-3 text-white mb-4 cinematic-font">Sourced for <span
+                            class="text-gradient">Soul</span></h2>
+                    <p class="text-white-50 fs-5">We've curated a collection of rare vintage outboard and modern
+                        precision tools to ensure your sound has character, weight, and timeless clarity.</p>
+                </div>
+            </div>
+
+            <div class="arsenal-grid">
+                <!-- Gear Item 1 -->
+                <div class="arsenal-item arsenal-item-1 reveal-up">
+                    <div class="arsenal-scanner"></div>
+                    <div class="arsenal-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&q=80&w=1200"
+                            class="arsenal-img" alt="Analog Console">
+                    </div>
+                    <div class="arsenal-overlay">
+                        <span class="tech-tag">Main Console</span>
+                        <h3 class="gear-name">Vintage Neve 8068</h3>
+                        <p class="gear-desc">The backbone of countless rock and soul records, delivering unmatched
+                            harmonic warmth.</p>
+                    </div>
+                </div>
+
+                <!-- Gear Item 2 -->
+                <div class="arsenal-item arsenal-item-2 reveal-up" style="transition-delay: 0.2s;">
+                    <div class="arsenal-scanner" style="animation-delay: -1s;"></div>
+                    <div class="arsenal-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1558403194-611308249627?auto=format&fit=crop&q=80&w=1200"
+                            class="arsenal-img" alt="Neumann Microphone">
+                    </div>
+                    <div class="arsenal-overlay">
+                        <span class="tech-tag">Transducer</span>
+                        <h3 class="gear-name">Neumann U47</h3>
+                        <p class="gear-desc">The gold standard for vocal recording. Every breath captured with legendary
+                            detail.</p>
+                    </div>
+                </div>
+
+                <!-- Gear Item 3 -->
+                <div class="arsenal-item arsenal-item-3 reveal-up" style="transition-delay: 0.3s;">
+                    <div class="arsenal-scanner" style="animation-delay: -2s;"></div>
+                    <div class="arsenal-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1520529986991-34c2e0a7a401?auto=format&fit=crop&q=80&w=1200"
+                            class="arsenal-img" alt="Studio Monitors">
+                    </div>
+                    <div class="arsenal-overlay">
+                        <span class="tech-tag">Monitoring</span>
+                        <h3 class="gear-name">ATC SCM25A</h3>
+                        <p class="gear-desc">Absolute spectral honesty. If it sounds right here, it sounds right
+                            anywhere.</p>
+                    </div>
+                </div>
+
+                <!-- Gear Item 4 -->
+                <div class="arsenal-item arsenal-item-4 reveal-up" style="transition-delay: 0.4s;">
+                    <div class="arsenal-scanner" style="animation-delay: -3s;"></div>
+                    <div class="arsenal-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&q=80&w=1200"
+                            class="arsenal-img" alt="Rack Gear">
+                    </div>
+                    <div class="arsenal-overlay">
+                        <span class="tech-tag">Outboard</span>
+                        <h3 class="gear-name">Teletronix LA-2A</h3>
+                        <p class="gear-desc">The world's most desired optical compressor for effortless smoothness.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4 – VIDEO SPLIT -->
+    <section class="video-split-section min-vh-100 d-flex align-items-center">
+        <div class="container container-custom">
+            <div class="row align-items-center g-0">
+                <div class="col-lg-5 reveal-up">
+                    <div class="video-container-premium">
+                        <div class="video-overlay-vignette"></div>
+                        <img src="https://img.freepik.com/free-photo/lifestyle-couple-date-night_23-2149131762.jpg?semt=ais_hybrid&w=740&q=80"
+                            class="cinematic-img-zoom" alt="Cinematic Studio Atmosphere">
+                    </div>
+                </div>
+                <div class="col-lg-7" style="padding: 5% 10%;">
+                    <div class="reveal-up">
+                        <span
+                            class="badge rounded-0 bg-primary bg-opacity-10 text-primary border border-primary border-opacity-20 px-3 py-2 text-uppercase ls-2 fw-bold small mb-4 d-inline-block">The
+                            Experience</span>
+                    </div>
+                    <h2 class="display-4 text-white mb-4 cinematic-font reveal-up" style="transition-delay: 0.1s;">
+                        Cinematic <br><span class="text-gradient">Immersion</span></h2>
+                    <p class="text-white-50 mb-5 reveal-up" style="transition-delay: 0.2s;">Experience the ultimate
+                        sonic environment where every note is treated with the respect it deserves. Our studios are
+                        built for focus and inspiration.</p>
+                    <div class="reveal-up" style="transition-delay: 0.3s;">
+                        <a href="contact.html" class="btn btn-premium btn-primary-studio">Schedule a Visit</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5 – ARTIST JOURNEY (SNAP SCROLL) -->
+    <section class="journey-scroll-container">
+        <!-- Panel 1 (PREMIUM GENESIS) -->
+        <div class="journey-panel">
+            <canvas class="music-canvas"></canvas>
+            <div class="pulse-orb-container">
+                <div class="pulse-orb"></div>
+            </div>
+            <div class="text-center focus-scale">
+                <div class="reveal-up">
+                    <span class="text-primary text-uppercase ls-2 small mb-3 d-block">Step 01</span>
+                </div>
+                <h2 class="display-3 text-white mb-4 cinematic-font reveal-tracking" style="transition-delay: 0.1s;">The
+                    Genesis of Sound</h2>
+                <p class="text-white-50 mx-auto reveal-up" style="max-width: 600px; transition-delay: 0.2s;">Where
+                    raw
+                    emotion meets architectural silence. We isolate the frequency of your inspiration before it even
+                    hits the microphone, ensuring every vibration is captured with absolute integrity.</p>
+            </div>
+        </div>
+        <!-- Panel 2 (NEW) -->
+        <div class="journey-panel">
+            <canvas class="music-canvas" data-color="0, 255, 255"></canvas>
+            <div class="text-center focus-scale">
+                <div class="reveal-up">
+                    <span class="text-primary text-uppercase ls-2 small mb-3 d-block">Step 02</span>
+                </div>
+                <h2 class="display-3 text-white mb-4 cinematic-font reveal-up" style="transition-delay: 0.1s;">The
+                    Blueprint</h2>
+                <p class="text-white-50 mx-auto reveal-up" style="max-width: 500px; transition-delay: 0.2s;">
+                    Architecting the sonic space. We map out the arrangement and frequency landscape to ensure a solid
+                    foundation.</p>
+            </div>
+        </div>
+        <!-- Panel 3 (NEW) -->
+        <div class="journey-panel">
+            <canvas class="music-canvas" data-color="255, 0, 255"></canvas>
+            <div class="text-center focus-scale">
+                <div class="reveal-up">
+                    <span class="text-primary text-uppercase ls-2 small mb-3 d-block">Step 03</span>
+                </div>
+                <h2 class="display-3 text-white mb-4 cinematic-font reveal-up" style="transition-delay: 0.1s;">The
+                    Performance</h2>
+                <p class="text-white-50 mx-auto reveal-up" style="max-width: 500px; transition-delay: 0.2s;">Translating
+                    raw energy into digital precision. Our elite signal chains capture every nuance of your delivery.
+                </p>
+            </div>
+        </div>
+        <!-- Panel 4 -->
+        <div class="journey-panel">
+            <canvas class="music-canvas" data-color="178, 34, 34"></canvas>
+            <div class="text-center focus-scale">
+                <div class="reveal-up">
+                    <span class="text-primary text-uppercase ls-2 small mb-3 d-block">Step 04</span>
+                </div>
+                <h2 class="display-3 text-white mb-4 cinematic-font reveal-up" style="transition-delay: 0.1s;">The
+                    Refinement</h2>
+                <p class="text-white-50 mx-auto reveal-up" style="max-width: 500px; transition-delay: 0.2s;">Sculpting
+                    the layers with world-class outboard gear, legendary pre-amps, and expert mixing techniques.</p>
+            </div>
+        </div>
+        <!-- Panel 5 -->
+        <div class="journey-panel">
+            <canvas class="music-canvas" data-color="255, 215, 0"></canvas>
+            <div class="text-center focus-scale">
+                <div class="reveal-up">
+                    <span class="text-primary text-uppercase ls-2 small mb-3 d-block">Step 05</span>
+                </div>
+                <h2 class="display-3 text-white mb-4 cinematic-font reveal-up" style="transition-delay: 0.1s;">The
+                    Legacy</h2>
+                <p class="text-white-50 mx-auto reveal-up" style="max-width: 500px; transition-delay: 0.2s;">Final
+                    masters designed for global translation. We preserve your art for a permanent and legendary impact.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 6 – IMMERSIVE FINALE -->
+    <section class="immersive-finale min-vh-100 d-flex align-items-center justify-content-center">
+        <canvas class="music-canvas" data-color="255, 255, 255"></canvas>
+        <div class="moving-spotlight"></div>
+        <img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&q=80&w=1600"
+            class="slow-zoom-bg" alt="Studio Glow">
+        <div class="video-overlay-vignette"></div>
+
+        <div class="container container-custom position-relative z-3 text-center">
+            <div class="reveal-up">
+                <span
+                    class="badge rounded-0 bg-primary bg-opacity-10 text-primary border border-primary border-opacity-20 px-4 py-2 text-uppercase ls-2 fw-bold mb-4 d-inline-block">Final
+                    Session</span>
+            </div>
+            <h2 class="display-2 text-white mb-4 cinematic-font reveal-up" style="transition-delay: 0.1s;">Your Sound,
+                <br><span class="text-gradient">Eternalized</span>
+            </h2>
+            <p class="text-white-50 fs-4 mb-5 mx-auto reveal-up" style="max-width: 700px; transition-delay: 0.2s;">Join
+                the ranks of elite artists who
+                choose SonicForge for their most important work.</p>
+            <div class="reveal-up" style="transition-delay: 0.3s;">
+                <a href="contact.html"
+                    class="btn btn-premium btn-primary-studio btn-lg px-5 py-3 glowing-cta-pulse">Begin Your Session</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="section-padding border-top border-light border-opacity-10 py-5">
+        <div class="container">
+            <div class="row g-4 text-center text-lg-start">
+                <div class="col-lg-4">
+                    <a href="index.html" class="footer-brand brand-identity mb-4">
+                        <img src="assets/images/logo.png" alt="SonicForge Logo" class="brand-logo-img">
+                        <span class="brand-text">SonicForge</span>
+                    </a>
+                    <p class="text-muted pe-lg-5">A premium music recording, mixing, and mastering studio dedicated to
+                        artist sonic excellence since 2012.</p>
+                    <div class="d-flex justify-content-center justify-content-lg-start gap-3 mt-4">
+                        <a href="#" class="btn btn-outline-studio btn-premium-sm rounded-circle p-2"><i
+                                class="bi bi-instagram"></i></a>
+                        <a href="#" class="btn btn-outline-studio btn-premium-sm rounded-circle p-2"><i
+                                class="bi bi-facebook"></i></a>
+                        <a href="#" class="btn btn-outline-studio btn-premium-sm rounded-circle p-2"><i
+                                class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 offset-lg-1">
+                    <h6 class="text-white text-uppercase mb-4 fw-bold">Quick Links</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="about.html"
+                                class="text-muted text-decoration-none hover:text-primary transition-all">About
+                                Studio</a></li>
+                        <li class="mb-2"><a href="services.html"
+                                class="text-muted text-decoration-none hover:text-primary transition-all">Our
+                                Services</a></li>
+                        <li class="mb-2"><a href="pricing.html"
+                                class="text-muted text-decoration-none hover:text-primary transition-all">Pricing
+                                Plans</a></li>
+                        <li><a href="contact.html"
+                                class="text-muted text-decoration-none hover:text-primary transition-all">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-2">
+                    <h6 class="text-white text-uppercase mb-4 fw-bold">Support</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="dashboard.html"
+                                class="text-muted text-decoration-none hover:text-primary transition-all">Artist
+                                Dashboard</a></li>
+                        <li class="mb-2"><a href="blog.html"
+                                class="text-muted text-decoration-none hover:text-primary transition-all">Studio
+                                Blog</a></li>
+                        <li class="mb-2"><a href="contact.html"
+                                class="text-muted text-decoration-none hover:text-primary transition-all">Book
+                                Online</a></li>
+                        <li><a href="#"
+                                class="text-muted text-decoration-none hover:text-primary transition-all">Support
+                                Center</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h6 class="text-white text-uppercase mb-4 fw-bold">Contact Info</h6>
+                    <ul class="list-unstyled text-muted">
+                        <li class="mb-3 d-flex align-items-center justify-content-center justify-content-lg-start"><i
+                                class="bi bi-geo-alt me-3 text-primary"></i> 123 Studio Drive, Nashville, TN</li>
+                        <li class="mb-3 d-flex align-items-center justify-content-center justify-content-lg-start"><i
+                                class="bi bi-telephone me-3 text-primary"></i> +1 (555) 123-4567</li>
+                        <li class="d-flex align-items-center justify-content-center justify-content-lg-start"><i
+                                class="bi bi-envelope me-3 text-primary"></i> echoes@sonicforge.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row mt-5 pt-4 border-top border-light border-opacity-10">
+                <div class="col-12 text-center text-muted small">
+                    <p class="mb-0">&copy; 2026 SonicForge Studio. Engineered for excellence.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

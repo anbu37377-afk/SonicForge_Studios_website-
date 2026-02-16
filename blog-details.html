@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artist Spotlight - SonicForge Studio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .article-content p {
+            margin-bottom: 2rem;
+            color: var(--text-muted);
+            font-size: 1.15rem;
+            line-height: 1.8;
+        }
+
+        .article-content h2,
+        .article-content h3 {
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-main);
+        }
+    </style>
+</head>
+
+<body data-theme="dark">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top scrolled">
+        <div class="container container-custom">
+            <a class="navbar-brand brand-identity" href="index.html">
+                <img src="assets/images/logo.png" alt="SonicForge Logo" class="brand-logo-img">
+                <span class="brand-text">SonicForge</span>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar">
+                <i class="bi bi-list"></i>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                style="background: var(--bg-card); color: var(--text-main);">
+                <div class="offcanvas-header border-bottom border-light border-opacity-10">
+                    <h5 class="offcanvas-title cinematic-font">Menu</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="home-2.html">Home 2</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="blog.html">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    </ul>
+
+                    <div class="d-flex align-items-center gap-2">
+                        <div id="theme-toggle" class="theme-toggle me-2">
+                            <i class="bi bi-moon-fill"></i>
+                        </div>
+                        <a href="login.html" class="btn btn-premium-sm btn-outline-studio">Login</a>
+                        <a href="register.html" class="btn btn-premium-sm btn-primary-studio">Sign Up</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="section-padding mt-5">
+        <div class="container container-custom reveal-up text-center">
+            <span
+                class="badge rounded-pill bg-primary bg-opacity-10 text-primary border border-primary border-opacity-25 px-3 py-2 mb-3">Artist
+                Spotlight</span>
+            <h1 class="display-3 fw-bold mb-4">Inside the <span class="text-gradient">"Neon Dreams"</span> Session</h1>
+            <div class="d-flex justify-content-center align-items-center text-muted">
+                <div class="d-flex align-items-center me-4">
+                    <i class="bi bi-person-circle me-2"></i> Sarah Vibe
+                </div>
+                <div class="d-flex align-items-center">
+                    <i class="bi bi-calendar3 me-2"></i> Oct 12, 2025
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="section-padding pt-0">
+        <div class="container container-custom">
+
+            <div class="rounded-4 overflow-hidden mb-5 reveal-up"
+                style="height: 500px; background: url('https://images.unsplash.com/photo-1514525253361-bee8718a300c?auto=format&fit=crop&q=80&w=1200') center/cover;">
+            </div>
+
+            <div class="row">
+                <div class="col-lg-8 mx-auto article-content reveal-up" style="transition-delay: 0.1s;">
+                    <p class="lead text-white">The Velocity's latest single, "Neon Dreams," wasn't just another
+                        recording session. It was an exploration of how analog grit can meet modern digital precision.
+                    </p>
+
+                    <p>When the band walked into Studio A, they had one goal: to create a track that felt like a
+                        cinematic journey through a rain-slicked city at midnight. As producers, our challenge was to
+                        translate that visual mood into a sonic reality.</p>
+
+                    <h2>Capturing the Foundation</h2>
+                    <p>We started with the drums. Marcus, the band's drummer, wanted a sound that was explosive yet
+                        tight. We set up in the main live room, using a combination of room mics and close-miked vintage
+                        snares. The secret sauce? Running the overheads through a pair of heavily driven 1176
+                        compressors to get that signature "pump."</p>
+
+                    <blockquote
+                        class="border-start border-4 border-primary ps-4 fst-italic my-5 py-4 bg-white bg-opacity-5 rounded-end">
+                        "The room just came alive as soon as we hit the tape. There's a certain way the low end settles
+                        when you're tracking to analog that you just can't duplicate perfectly in the box."
+                    </blockquote>
+
+                    <h2>The Vocal Chain</h2>
+                    <p>For Elena's vocals, we chose a vintage Neumann U87 through a Neve 1073 preamp. We wanted every
+                        breath to be audible, every emotion to feel right in the listener's ear. We recorded multiple
+                        layers, building a lush harmonic bed that gave the chorus its massive, ethereal feel.</p>
+
+                    <h3 class="mt-5">The Final Polish</h3>
+                    <p>Mixing took place on our SSL 4000 G. We stayed mostly out of the box, using outboard delays and
+                        reverbs to create the space. The result is a track that breathes with life and energy.</p>
+
+                    <div
+                        class="border-top border-light border-opacity-10 mt-5 pt-4 d-flex justify-content-between align-items-center">
+                        <span class="text-muted fw-bold">Share Session Story:</span>
+                        <div class="d-flex gap-2">
+                            <button class="btn btn-sm btn-outline-studio rounded-circle"
+                                style="width: 35px; height: 35px; padding:0;"><i class="bi bi-twitter-x"></i></button>
+                            <button class="btn btn-sm btn-outline-studio rounded-circle"
+                                style="width: 35px; height: 35px; padding:0;"><i class="bi bi-linkedin"></i></button>
+                            <button class="btn btn-sm btn-outline-studio rounded-circle"
+                                style="width: 35px; height: 35px; padding:0;"><i class="bi bi-facebook"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Global Footer -->
+    <footer class="section-padding border-top border-light border-opacity-10 py-5">
+        <div class="container">
+            <div class="row g-4 text-center text-lg-start">
+                <div class="col-lg-4">
+                    <a href="index.html" class="footer-brand brand-identity mb-4">
+                        <img src="assets/images/logo.png" alt="SonicForge Logo" class="brand-logo-img">
+                        <span class="brand-text">SonicForge</span>
+                    </a>
+                    <p class="text-muted pe-lg-5">A premium music recording, mixing, and mastering studio dedicated to
+                        artist sonic excellence since 2012.</p>
+                    <div class="d-flex justify-content-center justify-content-lg-start gap-3 mt-4">
+                        <a href="#" class="btn btn-outline-studio btn-premium-sm rounded-circle p-2"><i
+                                class="bi bi-instagram"></i></a>
+                        <a href="#" class="btn btn-outline-studio btn-premium-sm rounded-circle p-2"><i
+                                class="bi bi-facebook"></i></a>
+                        <a href="#" class="btn btn-outline-studio btn-premium-sm rounded-circle p-2"><i
+                                class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 offset-lg-1">
+                    <h6 class="text-white text-uppercase mb-4 fw-bold">Quick Links</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="about.html"
+                                class="text-muted text-decoration-none hover:text-primary transition-all">About
+                                Studio</a></li>
+                        <li class="mb-2"><a href="services.html"
+                                class="text-muted text-decoration-none hover:text-primary transition-all">Our
+                                Services</a></li>
+                        <li class="mb-2"><a href="pricing.html"
+                                class="text-muted text-decoration-none hover:text-primary transition-all">Pricing
+                                Plans</a></li>
+                        <li><a href="contact.html"
+                                class="text-muted text-decoration-none hover:text-primary transition-all">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-2">
+                    <h6 class="text-white text-uppercase mb-4 fw-bold">Support</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="dashboard.html"
+                                class="text-muted text-decoration-none hover:text-primary transition-all">Artist
+                                Dashboard</a></li>
+                        <li class="mb-2"><a href="blog.html"
+                                class="text-muted text-decoration-none hover:text-primary transition-all">Studio
+                                Blog</a></li>
+                        <li class="mb-2"><a href="contact.html"
+                                class="text-muted text-decoration-none hover:text-primary transition-all">Book
+                                Online</a></li>
+                        <li><a href="#"
+                                class="text-muted text-decoration-none hover:text-primary transition-all">Support
+                                Center</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h6 class="text-white text-uppercase mb-4 fw-bold">Contact Info</h6>
+                    <ul class="list-unstyled text-muted">
+                        <li class="mb-3 d-flex align-items-center justify-content-center justify-content-lg-start"><i
+                                class="bi bi-geo-alt me-3 text-primary"></i> 123 Studio Drive, Nashville, TN</li>
+                        <li class="mb-3 d-flex align-items-center justify-content-center justify-content-lg-start"><i
+                                class="bi bi-telephone me-3 text-primary"></i> +1 (555) 123-4567</li>
+                        <li class="d-flex align-items-center justify-content-center justify-content-lg-start"><i
+                                class="bi bi-envelope me-3 text-primary"></i> echoes@sonicforge.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row mt-5 pt-4 border-top border-light border-opacity-10">
+                <div class="col-12 text-center text-muted small">
+                    <p class="mb-0">&copy; 2026 SonicForge Studio. Engineered for excellence.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session Pricing - SonicForge Studio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Google Fonts: Playfair Display & Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Poppins:wght@300;400;600;700&family=Outfit:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body data-theme="dark">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top scrolled">
+        <div class="container container-custom">
+            <a class="navbar-brand brand-identity" href="index.html">
+                <img src="assets/images/logo.png" alt="SonicForge Logo" class="brand-logo-img">
+                <span class="brand-text">SonicForge</span>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar">
+                <i class="bi bi-list"></i>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                style="background: var(--bg-card); color: var(--text-main);">
+                <div class="offcanvas-header border-bottom border-light border-opacity-10">
+                    <h5 class="offcanvas-title cinematic-font">Menu</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="home-2.html">Home 2</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="pricing.html">Pricing</a></li>
+                        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    </ul>
+
+                    <div class="d-flex align-items-center gap-2">
+                        <div id="theme-toggle" class="theme-toggle me-2">
+                            <i class="bi bi-moon-fill"></i>
+                        </div>
+                        <a href="login.html" class="btn btn-premium-sm btn-outline-studio">Login</a>
+                        <a href="register.html" class="btn btn-premium-sm btn-primary-studio">Sign Up</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- SPLIT CINEMATIC HERO SECTION -->
+    <section class="hero-pricing">
+        <canvas id="music-canvas" class="music-canvas"></canvas>
+
+        <div class="container container-custom">
+            <div class="row align-items-center g-0">
+                <!-- Left Content -->
+                <div class="col-lg-6 pricing-left-content reveal-up">
+                    <span class="pricing-accent-label">SonicForge Studio</span>
+                    <h1 class="hero-title-music">Premium <br>Session <span class="text-gradient">Plans</span></h1>
+                    <p class="hero-subtitle-music mb-5">
+                        Professional recording, mixing, and mastering packages tailored for artists who demand
+                        world-class sonic excellence.
+                    </p>
+                    <div class="d-flex gap-3">
+                        <a href="#packages" class="btn btn-premium btn-accent-studio">View Packages</a>
+                        <a href="contact.html" class="btn btn-premium btn-outline-studio">Book a Session</a>
+                    </div>
+                </div>
+
+                <!-- Right Image -->
+                <div class="col-lg-6 pricing-right-image reveal-up" style="transition-delay: 0.2s;">
+                    <div class="pricing-image-container">
+                        <img src="https://i.pinimg.com/originals/c7/41/ba/c741ba988d26cbf9939ea828349fcac7.jpg"
+                            alt="Studio Producer" class="pricing-artist-img-split">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 1 – Session Packages Comparison -->
+    <section id="packages" class="section-padding pricing-comparison">
+        <canvas class="music-canvas"></canvas>
+        <div class="container container-custom">
+            <div class="row mb-5 text-center reveal-up">
+                <div class="col-lg-8 mx-auto">
+                    <span class="text-primary text-uppercase fw-bold ls-2 mb-3 d-block">Investment Plans</span>
+                    <h2 class="section-title">Session <span class="text-gradient">Packages</span></h2>
+                    <p class="text-white-50">Transparent pricing for world-class production.</p>
+                </div>
+            </div>
+
+            <div class="row g-4 align-items-stretch">
+                <!-- Package 1 -->
+                <div class="col-lg-4 reveal-up">
+                    <div class="glass-pricing-card">
+                        <h4 class="text-white mb-4 cinematic-font">The Single</h4>
+                        <div class="display-5 fw-bold text-white mb-3">$350</div>
+                        <p class="text-white-50 small mb-5">Perfect for vocal tracking or solo artists.</p>
+                        <ul class="list-unstyled mb-5">
+                            <li class="mb-3 text-white small"><i class="bi bi-check2 text-primary me-2"></i> 4 Hours
+                                Tracking</li>
+                            <li class="mb-3 text-white small"><i class="bi bi-check2 text-primary me-2"></i> Hybrid
+                                Logic/ProTools</li>
+                            <li class="mb-3 text-white small"><i class="bi bi-check2 text-primary me-2"></i> Master Gear
+                                Access</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-premium btn-outline-studio w-100">Select Plan</a>
+                    </div>
+                </div>
+                <!-- Package 2 -->
+                <div class="col-lg-4 reveal-up" style="transition-delay: 0.1s;">
+                    <div class="glass-pricing-card popular">
+                        <h4 class="text-white mb-4 cinematic-font">The Sessions</h4>
+                        <div class="display-5 fw-bold text-white mb-3">$650</div>
+                        <p class="text-white-50 small mb-5">Full day production for bands and musicians.</p>
+                        <ul class="list-unstyled mb-5">
+                            <li class="mb-3 text-white small"><i class="bi bi-check2 text-primary me-2"></i> 10 Hours
+                                Session</li>
+                            <li class="mb-3 text-white small"><i class="bi bi-check2 text-primary me-2"></i> Senior
+                                Engineer</li>
+                            <li class="mb-3 text-white small"><i class="bi bi-check2 text-primary me-2"></i> Multi-Track
+                                Stems</li>
+                            <li class="mb-3 text-white small"><i class="bi bi-check2 text-primary me-2"></i> Full Analog
+                                Summing</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-premium btn-primary-studio w-100">Select Plan</a>
+                    </div>
+                </div>
+                <!-- Package 3 -->
+                <div class="col-lg-4 reveal-up" style="transition-delay: 0.2s;">
+                    <div class="glass-pricing-card">
+                        <h4 class="text-white mb-4 cinematic-font">The Legacy</h4>
+                        <div class="display-5 fw-bold text-white mb-3">$2,500</div>
+                        <p class="text-white-50 small mb-5">Complete EP/Album production suite.</p>
+                        <ul class="list-unstyled mb-5">
+                            <li class="mb-3 text-white small"><i class="bi bi-check2 text-primary me-2"></i> 5 Dedicated
+                                Days</li>
+                            <li class="mb-3 text-white small"><i class="bi bi-check2 text-primary me-2"></i> Executive
+                                Producer</li>
+                            <li class="mb-3 text-white small"><i class="bi bi-check2 text-primary me-2"></i> Mix &
+                                Mastering</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-premium btn-outline-studio w-100">Select Plan</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2 – Studio Add-Ons -->
+    <section class="section-padding addons-section">
+        <canvas class="music-canvas"></canvas>
+        <div class="container container-custom text-center">
+            <div class="row mb-5 justify-content-center reveal-up">
+                <div class="col-lg-8">
+                    <span class="text-primary text-uppercase fw-bold ls-2 mb-3 d-block">Premium Enhancements</span>
+                    <h2 class="section-title">Studio <span class="text-gradient">Add-Ons</span></h2>
+                    <p class="text-white-50">Scale your session with specialized high-end options.</p>
+                </div>
+            </div>
+
+            <div class="addon-scroll reveal-up">
+                <div class="addon-card">
+                    <div class="text-primary fs-2 mb-3"><i class="bi bi-vinyl-fill"></i></div>
+                    <h5 class="text-white mb-2">Analog Tape Tracking</h5>
+                    <p class="text-white-50 small mb-4">Record onto 2-inch Studer tape for authentic saturation.</p>
+                    <div class="text-white fw-bold">+$150 / session</div>
+                </div>
+                <div class="addon-card">
+                    <div class="text-primary fs-2 mb-3"><i class="bi bi-camera-reels-fill"></i></div>
+                    <h5 class="text-white mb-2">Music Video BTS</h5>
+                    <p class="text-white-50 small mb-4">4K cinematic behind-the-scenes footage of your session.</p>
+                    <div class="text-white fw-bold">+$300 / day</div>
+                </div>
+                <div class="addon-card">
+                    <div class="text-primary fs-2 mb-3"><i class="bi bi-mic-fill"></i></div>
+                    <h5 class="text-white mb-2">Session Musician</h5>
+                    <p class="text-white-50 small mb-4">Hire top-tier professional session musicians on-demand.</p>
+                    <div class="text-white fw-bold">+$200 / hr</div>
+                </div>
+                <div class="addon-card">
+                    <div class="text-primary fs-2 mb-3"><i class="bi bi-box-seam-fill"></i></div>
+                    <h5 class="text-white mb-2">Equipment Rental</h5>
+                    <p class="text-white-50 small mb-4">Access to rare vintage pedals, synths, and guitars.</p>
+                    <div class="text-white fw-bold">+$50 / hr</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3 – How Pricing Works -->
+    <section class="section-padding pricing-workflow">
+        <canvas class="music-canvas"></canvas>
+        <div class="container container-custom">
+            <div class="row mb-5 text-center reveal-up">
+                <div class="col-lg-8 mx-auto">
+                    <span class="text-primary text-uppercase fw-bold ls-2 mb-3 d-block">The Journey</span>
+                    <h2 class="section-title">How Pricing <span class="text-gradient">Works</span></h2>
+                    <p class="text-white-50">A transparent path from consultation to your final master.</p>
+                </div>
+            </div>
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6 reveal-up">
+                    <div class="vertical-timeline-wrap">
+                        <div class="timeline-step mb-5 position-relative">
+                            <div class="timeline-node"></div>
+                            <h4 class="text-white mb-2">Consultation</h4>
+                            <p class="text-white-50">We discuss your artistic goals, reference Tracks, and technical
+                                needs.</p>
+                        </div>
+                        <div class="timeline-step mb-5 position-relative">
+                            <div class="timeline-node"></div>
+                            <h4 class="text-white mb-2">Deposit & Booking</h4>
+                            <p class="text-white-50">A 50% deposit secures your dates in our master calendar.</p>
+                        </div>
+                        <div class="timeline-step position-relative">
+                            <div class="timeline-node"></div>
+                            <h4 class="text-white mb-2">Session Day</h4>
+                            <p class="text-white-50">Enter the forge. We capture the magic in a high-vibe creative
+                                environment.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 reveal-up" style="transition-delay: 0.2s;">
+                    <div
+                        class="p-5 rounded-4 border border-light border-opacity-10 bg-white bg-opacity-5 backdrop-blur">
+                        <h4 class="text-white mb-4">Need a Custom Quote?</h4>
+                        <p class="text-white-50 mb-4">For larger projects, label-backed productions, or multi-week
+                            residency, we offer bespoke rates.</p>
+                        <a href="contact.html" class="btn btn-premium btn-accent-studio w-100">Request Custom Rate</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4 – Studio Investment Value -->
+    <section class="experience-immersive investment-section">
+        <canvas class="music-canvas"></canvas>
+        <div class="spotlight-beam"></div>
+        <div class="smoke-overlay"></div>
+        <img src="assets/img/pricing-investment.png" class="investment-split-img" alt="Studio Investment">
+
+        <div class="container container-custom position-relative z-3">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-10 reveal-up">
+                    <h2 class="display-3 text-white mb-4 cinematic-font">An Investment in <br><span
+                            class="text-gradient">Your Identity</span></h2>
+                    <p class="text-white-50 fs-5 mb-5 mx-auto" style="max-width: 800px;">
+                        Professional sound is not an expense; it is the currency of longevity. Secure your legacy in an
+                        environment engineered for winners.
+                    </p>
+                    <div class="d-flex gap-4 justify-content-center">
+                        <a href="contact.html" class="btn btn-premium btn-primary-studio px-5 py-3 glow-pulse">Book Your
+                            Session</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="section-padding border-top border-light border-opacity-10 py-5">
+        <div class="container">
+            <div class="row g-4 text-center text-lg-start">
+                <div class="col-lg-4">
+                    <a href="index.html" class="footer-brand brand-identity mb-4">
+                        <img src="assets/images/logo.png" alt="SonicForge Logo" class="brand-logo-img">
+                        <span class="brand-text">SonicForge</span>
+                    </a>
+                    <p class="text-muted pe-lg-5">A premium music recording, mixing, and mastering studio dedicated to
+                        artist sonic excellence since 2012.</p>
+                    <div class="d-flex justify-content-center justify-content-lg-start gap-3 mt-4">
+                        <a href="#" class="btn btn-outline-studio btn-premium-sm rounded-circle p-2"><i
+                                class="bi bi-instagram"></i></a>
+                        <a href="#" class="btn btn-outline-studio btn-premium-sm rounded-circle p-2"><i
+                                class="bi bi-facebook"></i></a>
+                        <a href="#" class="btn btn-outline-studio btn-premium-sm rounded-circle p-2"><i
+                                class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 offset-lg-1">
+                    <h6 class="text-white text-uppercase mb-4 fw-bold">Quick Links</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="about.html"
+                                class="text-muted text-decoration-none hover:text-primary transition-all">About
+                                Studio</a></li>
+                        <li class="mb-2"><a href="services.html"
+                                class="text-muted text-decoration-none hover:text-primary transition-all">Our
+                                Services</a></li>
+                        <li class="mb-2"><a href="pricing.html"
+                                class="text-muted text-decoration-none hover:text-primary transition-all">Pricing
+                                Plans</a></li>
+                        <li><a href="contact.html"
+                                class="text-muted text-decoration-none hover:text-primary transition-all">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-2">
+                    <h6 class="text-white text-uppercase mb-4 fw-bold">Support</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="dashboard.html"
+                                class="text-muted text-decoration-none hover:text-primary transition-all">Artist
+                                Dashboard</a></li>
+                        <li class="mb-2"><a href="blog.html"
+                                class="text-muted text-decoration-none hover:text-primary transition-all">Studio
+                                Blog</a></li>
+                        <li class="mb-2"><a href="contact.html"
+                                class="text-muted text-decoration-none hover:text-primary transition-all">Book
+                                Online</a></li>
+                        <li><a href="#"
+                                class="text-muted text-decoration-none hover:text-primary transition-all">Support
+                                Center</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h6 class="text-white text-uppercase mb-4 fw-bold">Contact Info</h6>
+                    <ul class="list-unstyled text-muted">
+                        <li class="mb-3 d-flex align-items-center justify-content-center justify-content-lg-start"><i
+                                class="bi bi-geo-alt me-3 text-primary"></i> 123 Studio Drive, Nashville, TN</li>
+                        <li class="mb-3 d-flex align-items-center justify-content-center justify-content-lg-start"><i
+                                class="bi bi-telephone me-3 text-primary"></i> +1 (555) 123-4567</li>
+                        <li class="d-flex align-items-center justify-content-center justify-content-lg-start"><i
+                                class="bi bi-envelope me-3 text-primary"></i> echoes@sonicforge.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row mt-5 pt-4 border-top border-light border-opacity-10">
+                <div class="col-12 text-center text-muted small">
+                    <p class="mb-0">&copy; 2026 SonicForge Studio. Engineered for excellence.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

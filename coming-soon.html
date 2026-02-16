@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon - SonicForge Studio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .countdown-box {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 30px;
+            min-width: 120px;
+            backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+
+<body data-theme="dark"
+    class="min-vh-100 d-flex flex-column justify-content-center align-items-center text-center overflow-hidden">
+
+    <!-- Background -->
+    <div class="fixed-top w-100 h-100" style="z-index: -1;">
+        <div class="hero-spotlight"></div>
+        <canvas id="music-canvas"></canvas>
+    </div>
+
+    <div class="container relative z-2">
+        <h1 class="display-2 fw-bold mb-3" style="font-family: 'Outfit', sans-serif;">SonicForge <span
+                class="text-gradient">Studio</span></h1>
+        <p class="lead text-muted mb-5 px-3">We're retuning the studio. The next chapter of sound begins soon.</p>
+
+        <div class="d-flex justify-content-center flex-wrap gap-4 mb-5" id="countdown">
+            <div class="countdown-box reveal-up">
+                <span class="display-3 fw-bold text-primary" id="days">00</span>
+                <p class="text-muted small mb-0 mt-2 uppercase ls-1">Days</p>
+            </div>
+            <div class="countdown-box reveal-up" style="transition-delay: 0.1s;">
+                <span class="display-3 fw-bold text-secondary" id="hours">00</span>
+                <p class="text-muted small mb-0 mt-2 uppercase ls-1">Hours</p>
+            </div>
+            <div class="countdown-box reveal-up" style="transition-delay: 0.2s;">
+                <span class="display-3 fw-bold text-accent" id="minutes">00</span>
+                <p class="text-muted small mb-0 mt-2 uppercase ls-1">Mins</p>
+            </div>
+        </div>
+
+        <div class="row justify-content-center reveal-up" style="transition-delay: 0.4s;">
+            <div class="col-md-6 col-lg-4 px-4">
+                <p class="text-muted mb-4">Be the first to know when we reopen.</p>
+                <div class="input-group">
+                    <input type="email" class="form-control bg-transparent border-light border-opacity-10 text-white"
+                        placeholder="Email Address">
+                    <button class="btn btn-primary-studio px-4">Notify Me</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Set the date we're counting down to
+        var countDownDate = new Date("Dec 31, 2026 00:00:00").getTime();
+
+        var x = setInterval(function () {
+            var now = new Date().getTime();
+            var distance = countDownDate - now;
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+
+            document.getElementById("days").innerHTML = days < 10 ? "0" + days : days;
+            document.getElementById("hours").innerHTML = hours < 10 ? "0" + hours : hours;
+            document.getElementById("minutes").innerHTML = minutes < 10 ? "0" + minutes : minutes;
+
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("countdown").innerHTML = "<h3 class='text-primary'>SESSION LIVE</h3>";
+            }
+        }, 1000);
+    </script>
+</body>
+
+</html>
