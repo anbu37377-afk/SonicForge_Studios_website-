@@ -174,6 +174,14 @@ h4,
     transform: translateY(0);
 }
 
+.transition-all {
+    transition: all 0.3s ease;
+}
+
+.hover\:text-primary:hover {
+    color: var(--primary) !important;
+}
+
 /* Section specific content containers to stay above particles */
 .section-padding {
     position: relative;
@@ -271,6 +279,59 @@ h4,
     height: 100%;
     position: relative;
     overflow: hidden;
+}
+
+/* Auth Specific UI */
+.auth-divider {
+    position: relative;
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.auth-divider::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border-color), transparent);
+    z-index: 1;
+}
+
+.auth-divider-text {
+    position: relative;
+    z-index: 2;
+    background: var(--bg-body);
+    /* Changed from --dark-bg to --bg-body for consistency */
+    padding: 0 15px;
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.social-auth-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border-color);
+    color: var(--text-main);
+    font-size: 1.25rem;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    text-decoration: none;
+}
+
+.social-auth-btn:hover {
+    background: rgba(255, 90, 31, 0.1);
+    border-color: var(--primary);
+    color: var(--primary);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(255, 90, 31, 0.2);
 }
 
 .studio-card:hover {
@@ -387,7 +448,7 @@ h4,
 .navbar:not(.scrolled) .theme-toggle,
 .navbar:not(.scrolled) .btn-outline-studio {
     color: var(--text-contrast) !important;
-    border-color: var(--border-color) !important;
+    border-color: rgba(0, 0, 0, 0.2) !important;
 }
 
 [data-theme="dark"] .navbar:not(.scrolled) .nav-link,
@@ -396,7 +457,7 @@ h4,
 [data-theme="dark"] .navbar:not(.scrolled) .theme-toggle,
 [data-theme="dark"] .navbar:not(.scrolled) .btn-outline-studio {
     color: #FFFFFF !important;
-    border-color: rgba(255, 255, 255, 0.3) !important;
+    border-color: rgba(255, 255, 255, 0.4) !important;
 }
 
 /* Specific fix for hero outline button */
@@ -1390,8 +1451,13 @@ h4,
         padding: 40px 30px;
     }
 
+    .contact-right-side {
+        justify-content: center;
+    }
+
     .contact-image-box {
         width: 100%;
+        max-width: 450px;
         margin-right: 0;
         margin-top: 50px;
     }
@@ -1615,8 +1681,22 @@ h4,
 @media (max-width: 991px) {
     .hero-blog {
         min-height: auto;
+        padding-top: 140px !important;
         padding-bottom: 80px;
         text-align: center;
+    }
+
+    .blog-status-tag {
+        justify-content: center;
+    }
+
+    .hero-subtitle-music {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-cta {
+        justify-content: center;
     }
 
     .blog-editorial-grid {
@@ -1922,6 +2002,19 @@ h4,
     animation: softGlowPulse 4s ease-in-out infinite alternate;
 }
 
+.mixing-img-premium {
+    width: 100%;
+    max-width: 400px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .mixing-img-premium {
+        max-width: 280px;
+    }
+}
+
 @keyframes softGlowPulse {
     0% {
         filter: drop-shadow(0 0 5px rgba(255, 90, 31, 0.2));
@@ -1944,6 +2037,7 @@ h4,
     overflow-x: auto;
     padding: 60px 20px;
     scrollbar-width: none;
+    justify-content: center;
 }
 
 .production-scroll::-webkit-scrollbar {
@@ -1959,6 +2053,7 @@ h4,
     backdrop-filter: blur(15px);
     transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     transform-style: preserve-3d;
+    text-align: center;
 }
 
 .experience-immersive {
@@ -1985,6 +2080,10 @@ h4,
 @media (max-width: 768px) {
     .parallax-img-wrap {
         height: 400px;
+    }
+
+    .production-scroll {
+        justify-content: flex-start;
     }
 
     .production-card {
@@ -2305,6 +2404,15 @@ h4,
     opacity: 0.8;
 }
 
+/* Light Mode Visibility Overrides for Fixed Dark Components on Blog */
+[data-theme="light"] .artist-story-card .text-white {
+    color: #FFFFFF !important;
+}
+
+[data-theme="light"] .artist-story-card .text-white-50 {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
 .tips-timeline-section {
     background: var(--bg-section-dark);
     position: relative;
@@ -2312,13 +2420,42 @@ h4,
 }
 
 .join-community-blog {
-    background: var(--bg-section-black);
+    background: #000;
     min-height: 70vh;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     overflow: hidden;
+}
+
+.join-community-blog::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7));
+    z-index: 2;
+}
+
+[data-theme="light"] .join-community-blog .text-white {
+    color: #FFFFFF !important;
+}
+
+[data-theme="light"] .join-community-blog .text-white-50 {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+[data-theme="light"] .join-community-blog .form-control {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border-color: rgba(255, 255, 255, 0.2) !important;
+    color: #FFFFFF !important;
+}
+
+[data-theme="light"] .join-community-blog .form-control::placeholder {
+    color: rgba(255, 255, 255, 0.4) !important;
 }
 
 .community-bg-img {
@@ -2330,6 +2467,7 @@ h4,
     object-fit: cover;
     opacity: 0.4;
     transition: transform 30s linear;
+    z-index: 1;
 }
 
 .join-community-blog:hover .community-bg-img {
@@ -2553,6 +2691,12 @@ h4,
 @media (max-width: 991px) {
     .sidebar {
         transform: translateX(-100%);
+        background: #120909 !important;
+        /* Opaque Deep Dark background */
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        box-shadow: 30px 0 60px rgba(0, 0, 0, 0.8);
+        width: 280px;
     }
 
     .sidebar.toggled {
@@ -2597,6 +2741,10 @@ h4,
 footer {
     background: var(--bg-section-dark);
     transition: var(--transition-cinematic);
+}
+
+footer a:hover {
+    color: var(--primary) !important;
 }
 
 /* Responsiveness for Contact Sections */
@@ -2807,42 +2955,35 @@ footer {
     z-index: 2;
 }
 
-/* SECTION 5 - HORIZONTAL SNAP SCROLL */
+/* SECTION 5 - ARTIST JOURNEY (VERTICAL STORYTELLING) */
 .journey-scroll-container {
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scrollbar-width: none;
     background: var(--bg-section-black);
-}
-
-.journey-scroll-container::-webkit-scrollbar {
-    display: none;
+    position: relative;
 }
 
 .journey-panel {
-    min-width: 100vw;
-    height: 100vh;
-    scroll-snap-align: start;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 100px;
+    padding: 120px 20px;
     position: relative;
-    border-right: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
     transition: all 0.8s ease;
 }
 
 .journey-panel:hover {
-    background: rgba(255, 90, 31, 0.02);
+    background: rgba(255, 90, 31, 0.03);
 }
 
 .focus-scale {
     transition: transform 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+    z-index: 10;
+    position: relative;
 }
 
 .journey-panel:hover .focus-scale {
-    transform: scale(1.05);
+    transform: scale(1.02);
 }
 
 /* SECTION 6 - IMMERSIVE FINALE */
@@ -2908,15 +3049,9 @@ footer {
 }
 
 @media (max-width: 991px) {
-    .journey-scroll-container {
-        flex-direction: column;
-        scroll-snap-type: none;
-    }
-
     .journey-panel {
         min-height: 80vh;
-        height: auto;
-        padding: 60px 20px;
+        padding: 80px 20px;
     }
 
     .image-stack-wrapper {
@@ -3517,4 +3652,55 @@ footer {
 
 .journey-panel .focus-scale {
     transition: transform 2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ====================================================
+   RESPONSIVE SPACING - MOBILE & TABLET 
+==================================================== */
+@media (max-width: 991px) {
+
+    .hero-title-music,
+    .display-4.cinematic-font {
+        margin-top: 40px !important;
+        margin-bottom: 25px !important;
+    }
+
+    /* Prevent sections from touching on mobile */
+    .split-diagonal {
+        padding-top: 100px !important;
+    }
+
+    /* Prevent layout shift (hamburger moving) when offcanvas opens */
+    body,
+    .navbar,
+    .fixed-top,
+    .sticky-top {
+        padding-right: 0 !important;
+    }
+
+    /* Fix Horizontal Gap on Mobile */
+    html,
+    body {
+        overflow-x: hidden !important;
+        width: 100% !important;
+        position: relative;
+    }
+}
+
+/* Tablet & Small Desktop Fixes */
+@media (min-width: 992px) and (max-width: 1366px) {
+    .nav-link {
+        padding: 0.5rem 0.4rem !important;
+        font-size: 0.75rem;
+    }
+
+    .navbar-brand {
+        margin-right: 1rem;
+        font-size: 1.5rem;
+    }
+
+    .btn-premium-sm {
+        padding: 8px 16px;
+        font-size: 0.65rem;
+    }
 }
