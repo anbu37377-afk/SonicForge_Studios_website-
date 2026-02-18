@@ -251,7 +251,6 @@ const SonicUI = {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('active');
 
-                    // Handle scramble if class exists
                     if (entry.target.classList.contains('scramble-text')) {
                         const fx = new TextScramble(entry.target);
                         fx.setText(entry.target.innerText);
@@ -261,6 +260,17 @@ const SonicUI = {
         }, observerOptions);
 
         document.querySelectorAll('.reveal-up, .reveal-left, .reveal-right, .reveal-focus, .reveal-tracking').forEach(el => observer.observe(el));
+
+        // Mobile Menu Scroll Lock
+        const navbarCollapse = document.getElementById('navbarContent');
+        if (navbarCollapse) {
+            navbarCollapse.addEventListener('show.bs.collapse', () => {
+                document.body.classList.add('menu-open');
+            });
+            navbarCollapse.addEventListener('hide.bs.collapse', () => {
+                document.body.classList.remove('menu-open');
+            });
+        }
     },
 
     spotlight() {

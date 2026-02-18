@@ -150,6 +150,32 @@ h4,
     color: var(--text-muted) !important;
 }
 
+.text-primary {
+    color: var(--primary) !important;
+    transition: var(--transition-cinematic);
+}
+
+.text-primary:hover {
+    color: var(--accent) !important;
+    text-decoration: underline !important;
+}
+
+.bg-primary {
+    background-color: var(--primary) !important;
+}
+
+.bg-secondary {
+    background-color: var(--secondary) !important;
+}
+
+.text-secondary {
+    color: var(--secondary) !important;
+}
+
+.text-accent {
+    color: var(--accent) !important;
+}
+
 /* Cinematic Particle Canvas - Fix layering & coverage */
 .music-canvas {
     position: absolute;
@@ -269,16 +295,41 @@ h4,
     transform: translateY(-5px);
 }
 
-/* Cinematic Cards */
-.studio-card {
+/* Equipment Grid */
+.equipment-card {
     background: var(--bg-card);
     border: 1px solid var(--border-color);
     backdrop-filter: var(--glass-blur);
     padding: 40px;
+    border-radius: 20px;
     transition: var(--transition-cinematic);
     height: 100%;
     position: relative;
     overflow: hidden;
+    text-align: center;
+}
+
+.equipment-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary);
+    background: rgba(255, 90, 31, 0.05);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.equipment-img-floating {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    display: block;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: var(--transition-cinematic);
+}
+
+.equipment-card:hover .equipment-img-floating {
+    transform: scale(1.1) rotate(5deg);
+    border-color: var(--secondary);
 }
 
 /* Auth Specific UI */
@@ -368,38 +419,29 @@ h4,
 /* ====================================================
    4. NAVIGATION
 ==================================================== */
+/* ====================================================
+   ANTI-GRAVITY HEADER - TRUE VIEWPORT FIXED
+==================================================== */
 .navbar {
-    height: var(--header-height);
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: var(--header-height);
     transition: var(--transition-cinematic);
-    z-index: 1000;
+    z-index: 9999 !important;
     display: flex;
     align-items: center;
-}
-
-.navbar .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.navbar-nav {
-    display: flex;
-    align-items: center;
-    gap: 0.25rem;
-}
-
-.navbar-brand {
-    font-family: 'Playfair Display', serif;
-    font-weight: 900;
-    font-size: 1.8rem;
-    color: var(--text-main) !important;
-    margin-right: 2rem;
+    padding: 15px 0;
 }
 
 .navbar.scrolled {
-    background: var(--glass-bg);
+    background: var(--glass-bg) !important;
     backdrop-filter: var(--glass-blur);
+    min-height: 80px;
+    padding: 10px 0;
     border-bottom: 1px solid var(--border-color);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 .nav-link {
@@ -2695,12 +2737,27 @@ h4,
         /* Opaque Deep Dark background */
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);
-        box-shadow: 30px 0 60px rgba(0, 0, 0, 0.8);
+        box-shadow: none;
         width: 280px;
+        visibility: hidden;
     }
 
     .sidebar.toggled {
         transform: translateX(0);
+        visibility: visible;
+        box-shadow: 30px 0 60px rgba(0, 0, 0, 0.8);
+    }
+
+    /* Force light text on dark sidebar in light mode */
+    [data-theme="light"] .sidebar .brand-text,
+    [data-theme="light"] .sidebar .sidebar-link {
+        color: rgba(255, 255, 255, 0.9) !important;
+    }
+
+    [data-theme="light"] .sidebar .sidebar-link.active,
+    [data-theme="light"] .sidebar .sidebar-link:hover {
+        color: var(--primary) !important;
+        background: rgba(255, 90, 31, 0.15);
     }
 
     .main-content {
@@ -3383,6 +3440,14 @@ footer a:hover {
     transition: var(--transition-cinematic);
 }
 
+[data-theme='light'] .visionary-info .text-white {
+    color: #FFFFFF !important;
+}
+
+[data-theme='light'] .visionary-info .text-primary {
+    color: var(--primary) !important;
+}
+
 [data-theme='light'] .card:hover,
 [data-theme='light'] .visionary-card:hover,
 [data-theme='light'] .addon-card:hover,
@@ -3678,29 +3743,80 @@ footer a:hover {
         padding-right: 0 !important;
     }
 
-    /* Fix Horizontal Gap on Mobile */
-    html,
-    body {
-        overflow-x: hidden !important;
-        width: 100% !important;
-        position: relative;
+    /* Anti-Gravity Header - Full Viewport Overlay */
+    .navbar {
+        background: var(--bg-card) !important;
+        height: auto !important;
+        min-height: 80px !important;
+        z-index: 10000 !important;
+        /* Top level */
     }
-}
 
-/* Tablet & Small Desktop Fixes */
-@media (min-width: 992px) and (max-width: 1366px) {
+    .navbar-collapse {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: var(--bg-card);
+        backdrop-filter: blur(25px);
+        -webkit-backdrop-filter: blur(25px);
+        z-index: 9999 !important;
+        /* Under the toggler but over everything else */
+        padding: 120px 30px 40px;
+        /* Large top padding to clear header brand */
+        display: flex !important;
+        flex-direction: column;
+        justify-content: flex-start;
+        visibility: hidden;
+        opacity: 0;
+        transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        overflow-y: auto;
+    }
+
+    .navbar-collapse.show {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    /* Body scroll lock when menu is active */
+    body.menu-open {
+        overflow: hidden !important;
+        height: 100vh !important;
+    }
+
+    .navbar-nav {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 20px !important;
+        text-align: center;
+        margin-bottom: auto !important;
+    }
+
     .nav-link {
-        padding: 0.5rem 0.4rem !important;
-        font-size: 0.75rem;
+        font-size: 1.8rem !important;
+        font-family: 'Playfair Display', serif;
+        font-weight: 700;
+        padding: 10px 0 !important;
     }
 
-    .navbar-brand {
-        margin-right: 1rem;
-        font-size: 1.5rem;
+    .menu-actions {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 30px;
+        gap: 15px !important;
+        padding-bottom: 20px;
     }
 
-    .btn-premium-sm {
-        padding: 8px 16px;
-        font-size: 0.65rem;
+    .menu-actions .btn {
+        width: 100%;
+        padding: 16px !important;
+        font-size: 0.9rem !important;
+    }
+
+    /* Toggle Icon Animation (Optional Visual Polish) */
+    .navbar-toggler[aria-expanded="true"] i::before {
+        content: "\f659";
+        /* Bootstrap icon for X (bi-x) */
     }
 }

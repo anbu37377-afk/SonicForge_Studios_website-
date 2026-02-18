@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SonicForge Studio | Where Sound Becomes Legacy</title>
+    <link rel="icon" type="image/png" href="assets/images/logo.png">
 
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -23,44 +24,35 @@
 
 <body data-theme="dark">
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg fixed-top">
+    <!-- Navbar (Anti-Gravity Header) -->
+    <nav class="navbar navbar-expand-lg fixed-top anti-gravity-nav">
         <div class="container container-custom">
             <a class="navbar-brand brand-identity" href="index.html">
                 <img src="assets/images/logo.png" alt="SonicForge Logo" class="brand-logo-img">
                 <span class="brand-text">SonicForge</span>
             </a>
-
-            <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas"
-                data-bs-target="#offcanvasNavbar">
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false"
+                aria-label="Toggle navigation">
                 <i class="bi bi-list"></i>
             </button>
-
-            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
-                style="background: var(--bg-card); color: var(--text-main);">
-                <div class="offcanvas-header border-bottom border-light border-opacity-10">
-                    <h5 class="offcanvas-title cinematic-font">Menu</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
-                </div>
-                <div class="offcanvas-body">
-                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-                        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="home-2.html">Home 2</a></li>
-                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-                        <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
-                        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-                        <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                    </ul>
-
-                    <div class="d-flex align-items-center gap-2">
-                        <div id="theme-toggle" class="theme-toggle me-2">
-                            <i class="bi bi-moon-fill"></i>
-                        </div>
-                        <a href="login.html" class="btn btn-premium-sm btn-primary-studio">Login</a>
-                        <a href="register.html" class="btn btn-premium-sm btn-primary-studio">Sign Up</a>
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="home-2.html">Home 2</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+                <div class="d-flex align-items-center gap-2 menu-actions">
+                    <div id="theme-toggle" class="theme-toggle me-2">
+                        <i class="bi bi-moon-fill"></i>
                     </div>
+                    <a href="login.html" class="btn btn-premium-sm btn-primary-studio">Login</a>
+                    <a href="register.html" class="btn btn-premium-sm btn-primary-studio">Sign Up</a>
                 </div>
             </div>
         </div>
@@ -77,9 +69,8 @@
                 <!-- Content Column (Left) -->
                 <div class="col-lg-6 hero-left-side">
                     <div class="hero-content reveal-left pt-lg-5">
-                        <div class="d-flex align-items-center justify-content-center gap-3 mb-4">
-                            <span
-                                class="badge rounded-0 bg-primary bg-opacity-10 text-primary border border-primary border-opacity-20 px-3 py-2 text-uppercase ls-2 fw-bold small">
+                        <div class="d-flex align-items-center justify-content-center gap-3 mb-2">
+                            <span class="text-primary text-uppercase ls-2 fw-bold small">
                                 Global Standard
                             </span>
                         </div>
@@ -119,10 +110,8 @@
         <div class="container container-custom">
             <div class="row align-items-center g-5">
                 <div class="col-lg-7">
-                    <div class="reveal-up mb-4 d-flex justify-content-center">
-                        <span
-                            class="badge rounded-0 bg-primary bg-opacity-10 text-primary border border-primary border-opacity-20 px-3 py-2 text-uppercase ls-2 fw-bold small">The
-                            Vision</span>
+                    <div class="reveal-up mb-2 d-flex justify-content-center">
+                        <span class="text-primary text-uppercase ls-2 fw-bold small">The Vision</span>
                     </div>
                     <h2 class="display-4 fw-bold text-white mb-4 cinematic-font reveal-up"
                         style="transition-delay: 0.1s;">Precision in Every <br><span
@@ -147,8 +136,7 @@
         <canvas class="music-canvas"></canvas>
         <div class="container container-custom text-center">
             <div class="reveal-up">
-                <span
-                    class="badge rounded-0 bg-secondary bg-opacity-10 text-secondary border border-secondary border-opacity-20 px-3 py-2 text-uppercase ls-2 fw-bold small mb-4 d-inline-block">Atmosphere</span>
+                <span class="text-secondary text-uppercase ls-2 fw-bold small mb-4 d-inline-block">Atmosphere</span>
             </div>
             <h2 class="section-title glow-breathing reveal-up" style="transition-delay: 0.1s;">Sculpting <span
                     class="text-gradient">Sonic Space</span></h2>
@@ -178,9 +166,7 @@
         <div class="container container-custom py-5">
             <div class="row mb-5 text-center">
                 <div class="col-lg-8 mx-auto reveal-up">
-                    <span
-                        class="badge rounded-0 bg-primary bg-opacity-10 text-primary border border-primary border-opacity-20 px-3 py-2 text-uppercase ls-2 fw-bold small mb-4 d-inline-block">The
-                        Toolkit</span>
+                    <span class="text-primary text-uppercase ls-2 fw-bold small mb-3 d-inline-block">The Toolkit</span>
                     <h2 class="display-3 text-white mb-4 cinematic-font">Sourced for <span
                             class="text-gradient">Soul</span></h2>
                     <p class="text-white-50 fs-5">We've curated a collection of rare vintage outboard and modern
@@ -264,8 +250,7 @@
                 </div>
                 <div class="col-lg-7" style="padding: 5% 10%;">
                     <div class="reveal-up">
-                        <span
-                            class="badge rounded-0 bg-primary bg-opacity-10 text-primary border border-primary border-opacity-20 px-3 py-2 text-uppercase ls-2 fw-bold small mb-4 d-inline-block">The
+                        <span class="text-primary text-uppercase ls-2 fw-bold small mb-3 d-inline-block">The
                             Experience</span>
                     </div>
                     <h2 class="display-4 text-white mb-4 cinematic-font reveal-up" style="transition-delay: 0.1s;">
@@ -368,9 +353,7 @@
 
         <div class="container container-custom position-relative z-3 text-center">
             <div class="reveal-up">
-                <span
-                    class="badge rounded-0 bg-primary bg-opacity-10 text-primary border border-primary border-opacity-20 px-4 py-2 text-uppercase ls-2 fw-bold mb-4 d-inline-block">Final
-                    Session</span>
+                <span class="text-primary text-uppercase ls-2 fw-bold small mb-3 d-inline-block">Final Session</span>
             </div>
             <h2 class="display-2 text-white mb-4 cinematic-font reveal-up" style="transition-delay: 0.1s;">Your Sound,
                 <br><span class="text-gradient">Eternalized</span>
