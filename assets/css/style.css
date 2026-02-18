@@ -385,8 +385,46 @@ h4,
     box-shadow: 0 10px 20px rgba(255, 90, 31, 0.2);
 }
 
+/* Authentication Pages Branding */
+.auth-brand {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 25px !important;
+    margin-top: 40px;
+    /* Moved down to avoid touching top screen */
+    margin-bottom: 20px;
+    transition: var(--transition-cinematic);
+    text-decoration: none !important;
+}
+
+.auth-brand .brand-logo-img {
+    height: 60px !important;
+    width: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 0 20px rgba(255, 90, 31, 0.3));
+    margin: 0;
+}
+
+.auth-brand .brand-text {
+    font-size: 2.2rem !important;
+    letter-spacing: 1.5px;
+    line-height: 1;
+    margin: 0;
+}
+
+.studio-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    backdrop-filter: var(--glass-blur);
+    border-radius: 20px;
+    transition: var(--transition-cinematic);
+    position: relative;
+    overflow: hidden;
+}
+
 .studio-card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-5px);
     border-color: var(--primary);
     background: rgba(255, 90, 31, 0.05);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
@@ -739,7 +777,7 @@ h4,
 }
 
 /* Response: Split Hero */
-@media (max-width: 991px) {
+@media (max-width: 1199px) {
     .hero-music {
         height: auto;
         padding-bottom: 0;
@@ -908,7 +946,7 @@ h4,
     }
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1199px) {
     .hero-home2 {
         height: auto;
         padding-bottom: 80px;
@@ -1133,7 +1171,7 @@ h4,
     transition: var(--transition-cinematic);
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1199px) {
     .hero-services {
         text-align: center;
         justify-content: center;
@@ -1323,7 +1361,7 @@ h4,
     }
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1199px) {
     .testimonial-wrap {
         padding: 40px 20px;
     }
@@ -1488,7 +1526,7 @@ h4,
     }
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1199px) {
     .contact-hero-container {
         padding: 40px 30px;
     }
@@ -1577,7 +1615,7 @@ h4,
     max-width: 550px;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1199px) {
     .hero-pricing {
         min-height: auto;
         padding-bottom: 80px;
@@ -1720,7 +1758,7 @@ h4,
     z-index: -1;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1199px) {
     .hero-blog {
         min-height: auto;
         padding-top: 140px !important;
@@ -2208,7 +2246,7 @@ h4,
     text-align: center;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1199px) {
     .addon-scroll {
         flex-wrap: nowrap;
         overflow-x: auto;
@@ -2730,7 +2768,7 @@ h4,
     backdrop-filter: blur(10px);
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1199px) {
     .sidebar {
         transform: translateX(-100%);
         background: #120909 !important;
@@ -2800,12 +2838,21 @@ footer {
     transition: var(--transition-cinematic);
 }
 
+[data-theme='light'] footer a {
+    color: #1A1A1D !important;
+    /* Darker, more highlighted links in light mode */
+}
+
+[data-theme='light'] footer a:hover {
+    color: var(--primary) !important;
+}
+
 footer a:hover {
     color: var(--primary) !important;
 }
 
 /* Responsiveness for Contact Sections */
-@media (max-width: 991px) {
+@media (max-width: 1199px) {
     .map-split-wrap {
         height: 350px;
         margin-bottom: 40px;
@@ -3105,7 +3152,7 @@ footer a:hover {
     }
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1199px) {
     .journey-panel {
         min-height: 80vh;
         padding: 80px 20px;
@@ -3267,7 +3314,7 @@ footer a:hover {
     }
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1199px) {
     .arsenal-grid {
         grid-template-columns: 1fr;
         grid-template-rows: auto;
@@ -3722,7 +3769,7 @@ footer a:hover {
 /* ====================================================
    RESPONSIVE SPACING - MOBILE & TABLET 
 ==================================================== */
-@media (max-width: 991px) {
+@media (max-width: 1199px) {
 
     .hero-title-music,
     .display-4.cinematic-font {
@@ -3798,6 +3845,8 @@ footer a:hover {
         font-family: 'Playfair Display', serif;
         font-weight: 700;
         padding: 10px 0 !important;
+        color: #FFFFFF !important;
+        /* Ensure solid white visibility in mobile menu */
     }
 
     .menu-actions {
