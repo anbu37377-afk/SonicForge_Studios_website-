@@ -823,44 +823,54 @@ h4,
 /* Home Page Mobile Button Design */
 @media (max-width: 767px) {
     .home-body .hero-cta {
-        gap: 15px !important;
-        flex-wrap: wrap;
-        justify-content: center !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 20px !important;
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto;
     }
 
     .home-body .hero-cta .btn {
-        width: 140px !important;
-        height: 140px !important;
-        padding: 0 !important;
+        width: 100% !important;
+        height: auto !important;
+        padding: 16px 30px !important;
         display: flex !important;
-        flex-direction: column !important;
         justify-content: center !important;
         align-items: center !important;
         text-align: center !important;
-        line-height: 1.4 !important;
-        font-size: 0.85rem !important;
-        border-radius: 8px !important;
-        font-weight: 700 !important;
-        letter-spacing: 0.1em !important;
-        white-space: normal !important;
+        font-size: 0.9rem !important;
+        border-radius: 12px !important;
+        font-weight: 600 !important;
+        letter-spacing: 0.15em !important;
+        text-transform: uppercase !important;
+        border: none !important;
+        transition: all 0.3s ease !important;
     }
 
     .home-body .hero-cta .btn-primary-studio {
-        background: #FF5A1F !important;
+        background: var(--primary) !important;
         color: #FFFFFF !important;
-        box-shadow: 0 10px 20px rgba(255, 90, 31, 0.2) !important;
+        box-shadow: 0 10px 25px rgba(255, 90, 31, 0.3) !important;
     }
 
     .home-body .hero-cta .btn-outline-studio {
         background: rgba(255, 255, 255, 0.05) !important;
         border: 1px solid rgba(0, 0, 0, 0.1) !important;
-        color: #333333 !important;
+        color: #1A1A1D !important;
         backdrop-filter: blur(10px);
     }
 
     [data-theme="dark"] .home-body .hero-cta .btn-outline-studio {
-        border-color: rgba(255, 255, 255, 0.2) !important;
+        background: rgba(255, 255, 255, 0.03) !important;
+        border: 1px solid rgba(255, 255, 255, 0.15) !important;
         color: #FFFFFF !important;
+    }
+
+    /* Subtle animation for mobile interaction */
+    .home-body .hero-cta .btn:active {
+        transform: scale(0.96);
+        opacity: 0.9;
     }
 }
 
@@ -3903,11 +3913,12 @@ footer a:hover {
         -webkit-backdrop-filter: none;
         z-index: 9999 !important;
         /* Under the toggler but over everything else */
-        padding: 120px 30px 40px;
-        /* Large top padding to clear header brand */
+        padding: 90px 30px 30px;
+        /* Compact top padding to fit more content */
         display: flex !important;
         flex-direction: column;
-        justify-content: flex-start;
+        justify-content: center;
+        /* Centered for better viewport utilization */
         visibility: hidden;
         opacity: 0;
         transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
@@ -3928,16 +3939,20 @@ footer a:hover {
     .navbar-nav {
         flex-direction: column !important;
         align-items: center !important;
-        gap: 20px !important;
+        gap: 12px !important;
+        /* Reduced gap to save vertical space */
         text-align: center;
-        margin-bottom: auto !important;
+        margin-bottom: 20px !important;
+        /* Fixed margin instead of auto to control spacing */
     }
 
     .nav-link {
-        font-size: 1.8rem !important;
+        font-size: 1.4rem !important;
+        /* Reduced font size to fit viewport */
         font-family: 'Playfair Display', serif;
         font-weight: 700;
-        padding: 10px 0 !important;
+        padding: 6px 0 !important;
+        /* Tighter padding */
         color: #FFFFFF !important;
         /* Ensure solid white visibility in mobile menu */
     }
@@ -3945,9 +3960,9 @@ footer a:hover {
     .menu-actions {
         flex-direction: column;
         width: 100%;
-        margin-top: 30px;
-        gap: 15px !important;
-        padding-bottom: 20px;
+        margin-top: 10px;
+        gap: 10px !important;
+        padding-bottom: 10px;
     }
 
     .menu-actions .btn {
