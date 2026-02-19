@@ -787,28 +787,80 @@ h4,
         flex-direction: column;
     }
 
-    .hero-left {
+    .hero-left,
+    .hero-left-side,
+    .pricing-left-content {
         padding: 50px 8% 50px;
         text-align: center !important;
         flex: none;
         width: 100%;
     }
 
-    .hero-subtitle-music {
+    .hero-subtitle-music,
+    .home-body .hero-title-music {
         margin-left: auto;
         margin-right: auto;
+        text-align: center !important;
     }
 
-    .hero-buttons {
+    .hero-buttons,
+    .hero-cta,
+    .pricing-left-content .d-flex {
         justify-content: center;
     }
 
-    .hero-right {
+    .hero-right,
+    .hero-right-side,
+    .pricing-right-image {
         flex: none;
         width: 100%;
         height: 50vh;
         mask-image: linear-gradient(to top, transparent, black 15%);
         -webkit-mask-image: linear-gradient(to top, transparent, black 15%);
+    }
+}
+
+/* Home Page Mobile Button Design */
+@media (max-width: 767px) {
+    .home-body .hero-cta {
+        gap: 15px !important;
+        flex-wrap: wrap;
+        justify-content: center !important;
+    }
+
+    .home-body .hero-cta .btn {
+        width: 140px !important;
+        height: 140px !important;
+        padding: 0 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+        text-align: center !important;
+        line-height: 1.4 !important;
+        font-size: 0.85rem !important;
+        border-radius: 8px !important;
+        font-weight: 700 !important;
+        letter-spacing: 0.1em !important;
+        white-space: normal !important;
+    }
+
+    .home-body .hero-cta .btn-primary-studio {
+        background: #FF5A1F !important;
+        color: #FFFFFF !important;
+        box-shadow: 0 10px 20px rgba(255, 90, 31, 0.2) !important;
+    }
+
+    .home-body .hero-cta .btn-outline-studio {
+        background: rgba(255, 255, 255, 0.05) !important;
+        border: 1px solid rgba(0, 0, 0, 0.1) !important;
+        color: #333333 !important;
+        backdrop-filter: blur(10px);
+    }
+
+    [data-theme="dark"] .home-body .hero-cta .btn-outline-studio {
+        border-color: rgba(255, 255, 255, 0.2) !important;
+        color: #FFFFFF !important;
     }
 }
 
@@ -1524,6 +1576,15 @@ h4,
     50% {
         transform: translateY(-20px);
     }
+}
+
+/* Pricing Page Specific Utility */
+.investment-subtext {
+    color: #000 !important;
+}
+
+[data-theme="dark"] .investment-subtext {
+    color: #fff !important;
 }
 
 @media (max-width: 1199px) {
